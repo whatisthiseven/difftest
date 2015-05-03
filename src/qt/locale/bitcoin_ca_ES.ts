@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Sling</source>
-        <translation>Sobre Sling</translation>
+        <source>About Graviton</source>
+        <translation>Sobre Graviton</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Sling&lt;/b&gt; version</source>
-        <translation>versió &lt;b&gt;Sling&lt;/b&gt;</translation>
+        <source>&lt;b&gt;Graviton&lt;/b&gt; version</source>
+        <translation>versió &lt;b&gt;Graviton&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Sling developers</source>
+Copyright © 2014 The Graviton developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Sling developers</translation>
+Copyright © 2014 The Graviton developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -60,8 +60,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Sling addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Aquestes són les teves adreces de Sling per rebre els pagaments. És possible que vulgueu donar una diferent a cada remitent per a poder realitzar un seguiment de qui li está pagant.</translation>
+        <source>These are your Graviton addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Aquestes són les teves adreces de Graviton per rebre els pagaments. És possible que vulgueu donar una diferent a cada remitent per a poder realitzar un seguiment de qui li está pagant.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -75,8 +75,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Sling address</source>
-        <translation>Signar un missatge per demostrar que és propietari d&apos;una adreça Sling</translation>
+        <source>Sign a message to prove you own a Graviton address</source>
+        <translation>Signar un missatge per demostrar que és propietari d&apos;una adreça Graviton</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -90,8 +90,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Sling address</source>
-        <translation>Comproveu el missatge per assegurar-se que es va signar amb una adreça Sling especificada.</translation>
+        <source>Verify a message to ensure it was signed with a specified Graviton address</source>
+        <translation>Comproveu el missatge per assegurar-se que es va signar amb una adreça Graviton especificada.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -258,8 +258,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>Sling will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Sling tancarà ara per acabar el procés de xifrat. Recordeu que l&apos;encriptació del seu moneder no pot protegir completament les seves monedes de ser robades pel malware que pugui infectar al seu equip.</translation>
+        <source>Graviton will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Graviton tancarà ara per acabar el procés de xifrat. Recordeu que l&apos;encriptació del seu moneder no pot protegir completament les seves monedes de ser robades pel malware que pugui infectar al seu equip.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -352,8 +352,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Sling</source>
-        <translation>Mostra informació sobre Sling</translation>
+        <source>Show information about Graviton</source>
+        <translation>Mostra informació sobre Graviton</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -392,13 +392,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Sling address</source>
-        <translation>Enviar monedes a una adreça Sling</translation>
+        <source>Send coins to a Graviton address</source>
+        <translation>Enviar monedes a una adreça Graviton</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Sling</source>
-        <translation>Modificar les opcions de configuració per a Sling</translation>
+        <source>Modify configuration options for Graviton</source>
+        <translation>Modificar les opcions de configuració per a Graviton</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -438,8 +438,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Sling</source>
-        <translation>Sling</translation>
+        <source>Graviton</source>
+        <translation>Graviton</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -448,8 +448,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Sling</source>
-        <translation>&amp;Sobre Sling</translation>
+        <source>&amp;About Graviton</source>
+        <translation>&amp;Sobre Graviton</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Sling client</source>
-        <translation>Client Sling</translation>
+        <source>Graviton client</source>
+        <translation>Client Graviton</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Sling network</source>
-        <translation><numerusform>%n conexió activa a la xarxa Sling</numerusform><numerusform>%n conexions actives a la xarxa Sling</numerusform></translation>
+        <source>%n active connection(s) to Graviton network</source>
+        <translation><numerusform>%n conexió activa a la xarxa Graviton</numerusform><numerusform>%n conexions actives a la xarxa Graviton</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -596,8 +596,8 @@ Address: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Sling address or malformed URI parameters.</source>
-        <translation>l&apos;URI no es pot analitzar! Això pot ser causat per una adreça Sling no vàlida o paràmetres URI malformats.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Graviton address or malformed URI parameters.</source>
+        <translation>l&apos;URI no es pot analitzar! Això pot ser causat per una adreça Graviton no vàlida o paràmetres URI malformats.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -719,8 +719,8 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Sling can no longer continue safely and will quit.</source>
-        <translation>S&apos;ha produït un error fatal. Sling ja no pot continuar de forma segura i es tancarà.</translation>
+        <source>A fatal error occurred. Graviton can no longer continue safely and will quit.</source>
+        <translation>S&apos;ha produït un error fatal. Graviton ja no pot continuar de forma segura i es tancarà.</translation>
     </message>
 </context>
 <context>
@@ -1053,8 +1053,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Sling address.</source>
-        <translation>La direcció introduïda &quot;%1&quot; no és una adreça Sling vàlida.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Graviton address.</source>
+        <translation>La direcció introduïda &quot;%1&quot; no és una adreça Graviton vàlida.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1072,8 +1072,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Sling-Qt</source>
-        <translation>Sling-Qt</translation>
+        <source>Graviton-Qt</source>
+        <translation>Graviton-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1145,13 +1145,13 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Sling after logging in to the system.</source>
-        <translation>Inicia automàticament Sling després d&apos;entrar en el sistema.</translation>
+        <source>Automatically start Graviton after logging in to the system.</source>
+        <translation>Inicia automàticament Graviton després d&apos;entrar en el sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Sling on system login</source>
-        <translation>&amp;Iniciar Sling amb l&apos;inici de sessió</translation>
+        <source>&amp;Start Graviton on system login</source>
+        <translation>&amp;Iniciar Graviton amb l&apos;inici de sessió</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1160,8 +1160,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Sling client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Obrir automàticament el port de client Sling en el router. Això només funciona quan el router és compatible amb UPnP i està habilitat.</translation>
+        <source>Automatically open the Graviton client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Obrir automàticament el port de client Graviton en el router. Això només funciona quan el router és compatible amb UPnP i està habilitat.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1170,8 +1170,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Sling network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connecteu-vos a la xarxa Sling través d&apos;un proxy SOCKS (per exemple, quan es connecta a través de Tor).</translation>
+        <source>Connect to the Graviton network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connecteu-vos a la xarxa Graviton través d&apos;un proxy SOCKS (per exemple, quan es connecta a través de Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1245,8 +1245,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Sling.</source>
-        <translation>L&apos;idioma de la interfície d&apos;usuari es pot configurar aquí. Aquesta configuració s&apos;aplicarà després de reiniciar Sling.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Graviton.</source>
+        <translation>L&apos;idioma de la interfície d&apos;usuari es pot configurar aquí. Aquesta configuració s&apos;aplicarà després de reiniciar Graviton.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1312,8 +1312,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Sling.</source>
-        <translation>Aquesta configuració s&apos;aplicarà després de reiniciar Sling.</translation>
+        <source>This setting will take effect after restarting Graviton.</source>
+        <translation>Aquesta configuració s&apos;aplicarà després de reiniciar Graviton.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1331,8 +1331,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Sling network after a connection is established, but this process has not completed yet.</source>
-        <translation>La informació mostrada pot estar fora de data. El seu moneder es sincronitza automàticament amb la xarxa Sling després d&apos;establir una connexió, però aquest procés no s&apos;ha completat encara.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Graviton network after a connection is established, but this process has not completed yet.</source>
+        <translation>La informació mostrada pot estar fora de data. El seu moneder es sincronitza automàticament amb la xarxa Graviton després d&apos;establir una connexió, però aquest procés no s&apos;ha completat encara.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1405,7 +1405,7 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start sling: click-to-pay handler</source>
+        <source>Cannot start graviton: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1573,8 +1573,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Sling-Qt help message to get a list with possible Sling command-line options.</source>
-        <translation>Mostra el missatge d&apos;ajuda de Sling-Qt per obtenir una llista amb les possibles opcions de línia d&apos;ordres Sling.</translation>
+        <source>Show the Graviton-Qt help message to get a list with possible Graviton command-line options.</source>
+        <translation>Mostra el missatge d&apos;ajuda de Graviton-Qt per obtenir una llista amb les possibles opcions de línia d&apos;ordres Graviton.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1593,13 +1593,13 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Sling - Debug window</source>
-        <translation>Sling - Finestra Depuració</translation>
+        <source>Graviton - Debug window</source>
+        <translation>Graviton - Finestra Depuració</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Sling Core</source>
-        <translation>Nucli Sling</translation>
+        <source>Graviton Core</source>
+        <translation>Nucli Graviton</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1608,8 +1608,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Sling debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Obriu el fitxer de registre de depuració Sling des del directori de dades actual. Això pot trigar uns segons en els arxius de registre de grans dimensions.</translation>
+        <source>Open the Graviton debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Obriu el fitxer de registre de depuració Graviton des del directori de dades actual. Això pot trigar uns segons en els arxius de registre de grans dimensions.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1618,8 +1618,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Sling RPC console.</source>
-        <translation>Benvingut a la consola RPC de Sling.</translation>
+        <source>Welcome to the Graviton RPC console.</source>
+        <translation>Benvingut a la consola RPC de Graviton.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1812,8 +1812,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Sling address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Introdueix una adreça Sling (p.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Introdueix una adreça Graviton (p.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1912,8 +1912,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Sling address</source>
-        <translation>ADVERTÈNCIA: Direcció Sling invàlida</translation>
+        <source>WARNING: Invalid Graviton address</source>
+        <translation>ADVERTÈNCIA: Direcció Graviton invàlida</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1986,8 +1986,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Sling address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Introdueix una adreça Sling (p.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Introdueix una adreça Graviton (p.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -2047,8 +2047,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Sling address</source>
-        <translation>Signar un missatge per demostrar que és propietari d&apos;aquesta adreça Sling</translation>
+        <source>Sign the message to prove you own this Graviton address</source>
+        <translation>Signar un missatge per demostrar que és propietari d&apos;aquesta adreça Graviton</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2079,8 +2079,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Sling address</source>
-        <translation>Comproveu el missatge per assegurar-se que es va signar amb l&apos;adreça Sling especificada.</translation>
+        <source>Verify the message to ensure it was signed with the specified Graviton address</source>
+        <translation>Comproveu el missatge per assegurar-se que es va signar amb l&apos;adreça Graviton especificada.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2090,8 +2090,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Sling address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Introdueix una adreça Sling (p.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Introdueix una adreça Graviton (p.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2100,8 +2100,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Sling signature</source>
-        <translation>Introduïu la signatura Sling</translation>
+        <source>Enter Graviton signature</source>
+        <translation>Introduïu la signatura Graviton</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2679,8 +2679,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Sling version</source>
-        <translation>versió Sling</translation>
+        <source>Graviton version</source>
+        <translation>versió Graviton</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2689,8 +2689,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or slingd</source>
-        <translation>Enviar comandes a -server o slingd</translation>
+        <source>Send command to -server or gravitond</source>
+        <translation>Enviar comandes a -server o gravitond</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2709,13 +2709,13 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: sling.conf)</source>
-        <translation>Especifiqueu el fitxer de configuració (per defecte: sling.conf)</translation>
+        <source>Specify configuration file (default: graviton.conf)</source>
+        <translation>Especifiqueu el fitxer de configuració (per defecte: graviton.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: slingd.pid)</source>
-        <translation>Especificar arxiu pid (per defecte: slingd.pid)</translation>
+        <source>Specify pid file (default: gravitond.pid)</source>
+        <translation>Especificar arxiu pid (per defecte: gravitond.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2732,13 +2732,13 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=slingrpc
+rpcuser=gravitonrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Graviton Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2844,8 +2844,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Sling will not work properly.</source>
-        <translation>Avís: Comproveu que la data i hora de l&apos;equip siguin correctes! Si el seu rellotge és erroni Sling no funcionarà correctament.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Graviton will not work properly.</source>
+        <translation>Avís: Comproveu que la data i hora de l&apos;equip siguin correctes! Si el seu rellotge és erroni Graviton no funcionarà correctament.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -3152,7 +3152,7 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Sling is shutting down.</source>
+        <source>Initialization sanity check failed. Graviton is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3217,13 +3217,13 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Sling</source>
-        <translation>Error en carregar wallet.dat: El moneder requereix la versió més recent de Sling</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Graviton</source>
+        <translation>Error en carregar wallet.dat: El moneder requereix la versió més recent de Graviton</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Sling to complete</source>
-        <translation>El moneder necessita ser reescrita: reiniciar Sling per completar</translation>
+        <source>Wallet needed to be rewritten: restart Graviton to complete</source>
+        <translation>El moneder necessita ser reescrita: reiniciar Graviton per completar</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3287,8 +3287,8 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Sling is probably already running.</source>
-        <translation>No es pot enllaçar a %s en aquest equip. Sling probablement ja estigui en funcionament.</translation>
+        <source>Unable to bind to %s on this computer. Graviton is probably already running.</source>
+        <translation>No es pot enllaçar a %s en aquest equip. Graviton probablement ja estigui en funcionament.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3327,7 +3327,7 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Sling is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Graviton is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

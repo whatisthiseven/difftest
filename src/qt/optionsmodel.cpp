@@ -51,11 +51,11 @@ void OptionsModel::Init()
     if (!settings.contains("nDarksendRounds"))
         settings.setValue("nDarksendRounds", 2);
 
-    if (!settings.contains("nAnonymizeSlingAmount"))
-        settings.setValue("nAnonymizeSlingAmount", 1000);
+    if (!settings.contains("nAnonymizeGravitonAmount"))
+        settings.setValue("nAnonymizeGravitonAmount", 1000);
 
     nDarksendRounds = settings.value("nDarksendRounds").toLongLong();
-    nAnonymizeSlingAmount = settings.value("nAnonymizeSlingAmount").toLongLong();
+    nAnonymizeGravitonAmount = settings.value("nAnonymizeGravitonAmount").toLongLong();
 
     // These are shared with core Bitcoin; we want
     // command-line options to override the GUI settings:
@@ -70,8 +70,8 @@ void OptionsModel::Init()
 
     if (settings.contains("nDarksendRounds"))
         SoftSetArg("-darksendrounds", settings.value("nDarksendRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeSlingAmount"))
-        SoftSetArg("-anonymizeslingamount", settings.value("nAnonymizeSlingAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeGravitonAmount"))
+        SoftSetArg("-anonymizegravitonamount", settings.value("nAnonymizeGravitonAmount").toString().toStdString());
 }
 
 int OptionsModel::rowCount(const QModelIndex & parent) const
@@ -216,10 +216,10 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
             settings.setValue("nDarksendRounds", nDarksendRounds);
             emit darksendRoundsChanged(nDarksendRounds);
             break;
-        case anonymizeSlingAmount:
-            nAnonymizeSlingAmount = value.toInt();
-            settings.setValue("nAnonymizeSlingAmount", nAnonymizeSlingAmount);
-            emit anonymizeSlingAmountChanged(nAnonymizeSlingAmount);
+        case anonymizeGravitonAmount:
+            nAnonymizeGravitonAmount = value.toInt();
+            settings.setValue("nAnonymizeGravitonAmount", nAnonymizeGravitonAmount);
+            emit anonymizeGravitonAmountChanged(nAnonymizeGravitonAmount);
             break;
         default:
             break;

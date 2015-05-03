@@ -18,14 +18,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Sling"
-            VALUE "FileDescription",    "Sling-Qt (OSS GUI client for Sling)"
+            VALUE "CompanyName",        "Graviton"
+            VALUE "FileDescription",    "Graviton-Qt (OSS GUI client for Graviton)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "sling-qt"
-            VALUE "LegalCopyright",     "2009-2014 The Bitcoin developers, 2012-2014 The NovaCoin & PPCoin developers, 2014 The Sling developers"
+            VALUE "InternalName",       "graviton-qt"
+            VALUE "LegalCopyright",     "2009-2014 The Bitcoin developers, 2012-2014 The NovaCoin & PPCoin developers, 2014 The Graviton developers"
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "sling-qt.exe"
-            VALUE "ProductName",        "Sling-Qt"
+            VALUE "OriginalFilename",   "graviton-qt.exe"
+            VALUE "ProductName",        "Graviton-Qt"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

@@ -4,7 +4,6 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "init.h"
-#include "irc.h"
 #include "chainparams.h"
 #include "db.h"
 #include "net.h"
@@ -31,7 +30,7 @@
 using namespace std;
 using namespace boost;
 
-static const int MAX_OUTBOUND_CONNECTIONS = 8;
+static const int MAX_OUTBOUND_CONNECTIONS = 16;
 
 bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOutbound = NULL, const char *strDest = NULL, bool fOneShot = false);
 
@@ -1021,7 +1020,7 @@ void ThreadMapPort()
             }
         }
 
-        string strDesc = "Sling " + FormatFullVersion();
+        string strDesc = "Graviton " + FormatFullVersion();
 
         try {
           while (!ShutdownRequested()) {
@@ -1572,7 +1571,7 @@ bool BindListenPort(const CService &addrBind, string& strError)
     {
         int nErr = WSAGetLastError();
         if (nErr == WSAEADDRINUSE)
-            strError = strprintf(_("Unable to bind to %s on this computer. Sling is probably already running."), addrBind.ToString());
+            strError = strprintf(_("Unable to bind to %s on this computer. Graviton is probably already running."), addrBind.ToString());
         else
             strError = strprintf(_("Unable to bind to %s on this computer (bind returned error %d, %s)"), addrBind.ToString(), nErr, strerror(nErr));
         LogPrintf("%s\n", strError);
@@ -1673,9 +1672,6 @@ void StartNode(boost::thread_group& threadGroup)
     // Map ports with UPnP
     MapPort(GetBoolArg("-upnp", USE_UPNP));
 #endif
-
-    // Get addresses from IRC and advertise ours
-    threadGroup.create_thread(boost::bind(&TraceThread<void (*)()>, "irc", &ThreadIRCSeed));
 
     // Send and receive from sockets, accept connections
     threadGroup.create_thread(boost::bind(&TraceThread<void (*)()>, "net", &ThreadSocketHandler));

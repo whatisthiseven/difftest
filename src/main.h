@@ -11,7 +11,6 @@
 #include "txmempool.h"
 #include "net.h"
 #include "script.h"
-#include "scrypt.h"
 
 #include <list>
 
@@ -20,9 +19,9 @@ class CValidationState;
 #define START_MASTERNODE_PAYMENTS_TESTNET 1429456427 
 #define START_MASTERNODE_PAYMENTS 1429456427 
 
-static const int64_t DARKSEND_COLLATERAL = (7331*COIN);
-static const int64_t DARKSEND_FEE = (0.001337*COIN);
-static const int64_t DARKSEND_POOL_MAX = (13371.99*COIN);
+static const int64_t DARKSEND_COLLATERAL = (25000*COIN);
+static const int64_t DARKSEND_FEE = (0.0001*COIN);
+static const int64_t DARKSEND_POOL_MAX = (250000.99*COIN);
 
 /*
     At 15 signatures, 1/2 of the masternode network can be owned by
@@ -42,10 +41,10 @@ static const int64_t DARKSEND_POOL_MAX = (13371.99*COIN);
 #define MASTERNODE_SYNC_IN_PROCESS             8
 #define MASTERNODE_REMOTELY_ENABLED            9
 
-#define MASTERNODE_MIN_CONFIRMATIONS           15
-#define MASTERNODE_MIN_DSEEP_SECONDS           (30*60)
-#define MASTERNODE_MIN_DSEE_SECONDS            (5*60)
-#define MASTERNODE_PING_SECONDS                (1*60)
+#define MASTERNODE_MIN_CONFIRMATIONS           7
+#define MASTERNODE_MIN_DSEEP_SECONDS           (15*60)
+#define MASTERNODE_MIN_DSEE_SECONDS            (1*60)
+#define MASTERNODE_PING_SECONDS                (10) //(1*60)
 #define MASTERNODE_EXPIRATION_SECONDS          (65*60)
 #define MASTERNODE_REMOVAL_SECONDS             (70*60)
 
@@ -59,7 +58,7 @@ class CReserveKey;
 class CWallet;
 
 /** The maximum allowed size for a serialized block, in bytes (network rule) */
-static const unsigned int MAX_BLOCK_SIZE = 2000000;
+static const unsigned int MAX_BLOCK_SIZE = 20000000;
 /** The maximum size for mined blocks */
 static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2;
 /** The maximum size for transactions we're willing to relay/mine **/
@@ -77,7 +76,7 @@ static const unsigned int DEFAULT_MAX_ORPHAN_BLOCKS = 750;
 /** The maximum number of entries in an 'inv' protocol message */
 static const unsigned int MAX_INV_SZ = 50000;
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
-static const int64_t MIN_TX_FEE = 1000;
+static const int64_t MIN_TX_FEE = 100;
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying) */
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 /** No amount larger than this (in satoshi) is valid */
@@ -89,11 +88,11 @@ static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20
 inline bool IsProtocolV1RetargetingFixed(int nHeight) { return TestNet() || nHeight > 0; }
 inline bool IsProtocolV2(int nHeight) { return TestNet() || nHeight > 0; }
 
-inline int64_t FutureDriftV1(int64_t nTime) { return nTime + 5 * 60; }
-inline int64_t FutureDriftV2(int64_t nTime) { return nTime + 5 * 60; }
+inline int64_t FutureDriftV1(int64_t nTime) { return nTime + 10 * 60; }
+inline int64_t FutureDriftV2(int64_t nTime) { return nTime + 10 * 60; }
 inline int64_t FutureDrift(int64_t nTime, int nHeight) { return IsProtocolV2(nHeight) ? FutureDriftV2(nTime) : FutureDriftV1(nTime); }
 
-inline unsigned int GetTargetSpacing(int nHeight) { return IsProtocolV2(nHeight) ? 60 : 60; }
+inline unsigned int GetTargetSpacing(int nHeight) { return IsProtocolV2(nHeight) ? 69 : 69; }
 
 extern CScript COINBASE_FLAGS;
 extern CCriticalSection cs_main;
@@ -165,8 +164,8 @@ void ThreadImport(std::vector<boost::filesystem::path> vImportFiles);
 
 bool CheckProofOfWork(uint256 hash, unsigned int nBits);
 unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfStake);
-int64_t GetProofOfWorkReward(int64_t nFees);
-int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees);
+int64_t GetProofOfWorkReward(int nHeight, int64_t nFees);
+int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees);
 unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime);
 unsigned int ComputeMinStake(unsigned int nBase, int64_t nTime, unsigned int nBlockTime);
 bool IsInitialBlockDownload();
@@ -703,7 +702,6 @@ public:
 
     uint256 GetPoWHash() const
     {
-        //return scrypt_blockhash(CVOIDBEGIN(nVersion));
 	return Hash(BEGIN(nVersion), END(nNonce));
     }
 

@@ -43,10 +43,10 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 CBigNum bnProofOfStakeLimitV2(~uint256(0) >> 20);
 
-unsigned int nStakeMinAge = 8 * 60 * 60; // 8 hours
-unsigned int nModifierInterval = 7 * 60; // time to elapse before new modifier is computed
+unsigned int nStakeMinAge = 5 * 60 * 60; // 5 hours
+unsigned int nModifierInterval = 5 * 60; // time to elapse before new modifier is computed
 
-int nCoinbaseMaturity = 37;
+int nCoinbaseMaturity = 45;
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 
@@ -77,7 +77,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Sling Signed Message:\n";
+const string strMessageMagic = "Graviton Signed Message:\n";
 
 extern enum Checkpoints::CPMode CheckpointsMode;
 
@@ -1127,26 +1127,76 @@ static CBigNum GetProofOfStakeLimit(int nHeight)
 }
 
 // miner's coin base reward
-int64_t GetProofOfWorkReward(int64_t nFees)
+int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 {
-    int64_t nSubsidy = 137 * COIN;
+    int64_t nSubsidy = 750 * COIN;
 
-    LogPrint("creation", "GetProofOfWorkReward() : create=%s nSubsidy=%d\n", FormatMoney(nSubsidy), nSubsidy);
+    if(nHeight < 950)
+    {
+        nSubsidy = 750 * COIN;
+    }
+    else if(nHeight < 1400)
+    {
+        nSubsidy = 550 * COIN;
+    }
+    else if(nHeight < 1900)
+    {
+        nSubsidy = 425 * COIN;
+    }
+    else if(nHeight < 2400)
+    {
+        nSubsidy =  325 * COIN;
+    }
+    else if(nHeight < 2850)
+    {
+        nSubsidy = 251 * COIN;
+    }
+    else if(nHeight < 3500)
+    {
+        nSubsidy = 190 * COIN;
+    }
+    else if(nHeight < 4000)
+    {
+        nSubsidy = 105 * COIN;
+    }
 
     return nSubsidy + nFees;
 }
 
 // miner's coin stake reward based on coin age spent (coin-days)
-int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
+int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees)
 {
-    int64_t nSubsidy = 1.337 * COIN;
+    int64_t nSubsidy = 40 * COIN;
 
-    LogPrint("creation", "GetProofOfStakeReward(): create=%s nCoinAge=%d\n", FormatMoney(nSubsidy), nCoinAge);
+    if(nHeight < 5000)
+    {
+        nSubsidy = 30 * COIN;
+    }
+    else if(nHeight < 7000)
+    {
+        nSubsidy = 45 * COIN;
+    }
+    else if(nHeight < 7250)
+    {
+        nSubsidy = 190 * COIN;
+    }
+    else if(nHeight < 8500)
+    {
+        nSubsidy = 80 * COIN;
+    }
+    else if(nHeight < 10000)
+    {
+        nSubsidy = 15 * COIN;
+    }
+    else if(nHeight < 13500)
+    {
+        nSubsidy = 30 * COIN;
+    }
 
     return nSubsidy + nFees;
 }
 
-static int64_t nTargetTimespan = 2 * 60;  // 2 mins
+static int64_t nTargetTimespan = 10 * 69;  // 11.5 mins
 
 //
 // maximum nBits value could possible be required nTime after
@@ -1158,8 +1208,8 @@ unsigned int ComputeMaxBits(CBigNum bnTargetLimit, unsigned int nBase, int64_t n
     bnResult *= 2;
     while (nTime > 0 && bnResult < bnTargetLimit)
     {
-        // Maximum 400% adjustment per day...
-        bnResult *= 4;
+        // Maximum 200% adjustment per day...
+        bnResult *= 2;
         nTime -= 24 * 60 * 60;
     }
     if (bnResult > bnTargetLimit)
@@ -1194,7 +1244,7 @@ const CBlockIndex* GetLastBlockIndex(const CBlockIndex* pindex, bool fProofOfSta
     return pindex;
 }
 
-int nTargetSpacing = 60;
+int nTargetSpacing = 69;
 
 unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfStake)
 {   
@@ -1701,7 +1751,6 @@ void CBlock::RebuildAddressIndex(CTxDB& txdb)
     }
 }
 
-static int64_t nTimeConnect = 0;
 bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
 {
     // Check it again in case a previous version let a bad block in, but skip BlockSig checking
@@ -1794,7 +1843,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
     
     if (IsProofOfWork())
     {
-        int64_t nReward = GetProofOfWorkReward(nFees);
+        int64_t nReward = GetProofOfWorkReward(pindex->nHeight, nFees);
         // Check coinbase reward
         if (vtx[0].GetValueOut() > nReward)
             return DoS(50, error("ConnectBlock() : coinbase reward exceeded (actual=%d vs calculated=%d)",
@@ -1808,7 +1857,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
         if (!vtx[1].GetCoinAge(txdb, nCoinAge))
             return error("ConnectBlock() : %s unable to get coin age for coinstake", vtx[1].GetHash().ToString());
 
-        int64_t nCalculatedStakeReward = GetProofOfStakeReward(nCoinAge, nFees);
+        int64_t nCalculatedStakeReward = GetProofOfStakeReward(pindex->nHeight, nCoinAge, nFees);
 
         if (nStakeReward > nCalculatedStakeReward)
             return DoS(100, error("ConnectBlock() : coinstake pays too much(actual=%d vs calculated=%d)", nStakeReward, nCalculatedStakeReward));
@@ -3055,7 +3104,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("sling-loadblk");
+    RenameThread("graviton-loadblk");
 
     CImportingNow imp;
 
@@ -4246,7 +4295,7 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue)
 {
-    int64_t ret = blockValue * 2/3; //67%
+    int64_t ret = blockValue * 1/2; //50%
 
     return ret;
 }

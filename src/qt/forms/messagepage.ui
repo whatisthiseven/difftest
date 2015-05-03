@@ -159,7 +159,7 @@
        <item>
         <widget class="QPushButton" name="sendButton">
          <property name="toolTip">
-          <string>Sign a message to prove you own a Sling address</string>
+          <string>Sign a message to prove you own a Graviton address</string>
          </property>
          <property name="text">
           <string>&amp;Send</string>

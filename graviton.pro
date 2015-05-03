@@ -1,6 +1,6 @@
 TEMPLATE = app
-TARGET = sling-qt
-VERSION = 1.3.3.7
+TARGET = graviton-qt
+VERSION = 1.2.0.0
 INCLUDEPATH += src src/json src/qt src/qt/plugins/mrichtexteditor
 QT += network printsupport
 DEFINES += ENABLE_WALLET
@@ -173,13 +173,11 @@ HEADERS += src/qt/bitcoingui.h \
     src/hash.h \
     src/uint256.h \
     src/kernel.h \
-    src/scrypt.h \
     src/pbkdf2.h \
     src/serialize.h \
     src/core.h \
     src/main.h \
     src/miner.h \
-    src/irc.h \
     src/net.h \
     src/key.h \
     src/eckey.h \
@@ -188,6 +186,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/txmempool.h \
     src/walletdb.h \
     src/script.h \
+    src/scrypt.h \
     src/init.h \
     src/mruset.h \
     src/json/json_spirit_writer_template.h \
@@ -241,7 +240,6 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/flowlayout.h \
     src/qt/darksendconfig.h \
     src/masternode.h \
-    src/keepass.h \
     src/darksend.h \
     src/instantx.h \
     src/activemasternode.h \
@@ -258,10 +256,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/masternodemanager.h \
     src/qt/addeditadrenalinenode.h \
     src/qt/adrenalinenodeconfigdialog.h \
-    src/qt/richlist.h \
     src/qt/qcustomplot.h \
-    src/richlistdata.h \
-    src/richlistdb.h \
     src/smessage.h \
     src/qt/messagepage.h \
     src/qt/messagemodel.h \
@@ -293,11 +288,11 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/key.cpp \
     src/eckey.cpp \
     src/script.cpp \
+    src/scrypt.cpp \
     src/core.cpp \
     src/main.cpp \
     src/miner.cpp \
     src/init.cpp \
-    src/irc.cpp \
     src/net.cpp \
     src/checkpoints.cpp \
     src/addrman.cpp \
@@ -343,16 +338,11 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/rpcconsole.cpp \
     src/noui.cpp \
     src/kernel.cpp \
-    src/scrypt-arm.S \
-    src/scrypt-x86.S \
-    src/scrypt-x86_64.S \
-    src/scrypt.cpp \
     src/pbkdf2.cpp \
     src/stealth.cpp \
     src/qt/flowlayout.cpp \
     src/qt/darksendconfig.cpp \
     src/masternode.cpp \
-    src/keepass.cpp \
     src/darksend.cpp \
     src/rpcdarksend.cpp \
     src/instantx.cpp \
@@ -370,10 +360,7 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/masternodemanager.cpp \
     src/qt/addeditadrenalinenode.cpp \
     src/qt/adrenalinenodeconfigdialog.cpp \
-    src/qt/richlist.cpp \
     src/qt/qcustomplot.cpp \
-    src/richlistdb.cpp \
-    src/richlistdata.cpp \
     src/smessage.cpp \
     src/qt/messagepage.cpp \
     src/qt/messagemodel.cpp \
@@ -404,7 +391,6 @@ FORMS += \
     src/qt/forms/masternodemanager.ui \
     src/qt/forms/addeditadrenalinenode.ui \
     src/qt/forms/adrenalinenodeconfigdialog.ui \
-    src/qt/forms/richlist.ui \
     src/qt/forms/messagepage.ui \
     src/qt/forms/sendmessagesentry.ui \
     src/qt/forms/sendmessagesdialog.ui \
@@ -489,7 +475,7 @@ macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
 macx:ICON = src/qt/res/icons/bitcoin.icns
-macx:TARGET = "Sling-Qt"
+macx:TARGET = "Graviton-Qt"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread

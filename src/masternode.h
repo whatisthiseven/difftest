@@ -1,4 +1,3 @@
-
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Darkcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
@@ -11,10 +10,7 @@
 #include "sync.h"
 #include "net.h"
 #include "key.h"
-//#include "primitives/transaction.h"
-//#include "primitives/block.h"
 #include "util.h"
-//#include "script/script.h"
 #include "base58.h"
 #include "main.h"
 #include "timedata.h"
@@ -34,10 +30,10 @@ class uint256;
 #define MASTERNODE_SYNC_IN_PROCESS             8
 #define MASTERNODE_REMOTELY_ENABLED            9
 
-#define MASTERNODE_MIN_CONFIRMATIONS           15
-#define MASTERNODE_MIN_DSEEP_SECONDS           (30*60)
-#define MASTERNODE_MIN_DSEE_SECONDS            (5*60)
-#define MASTERNODE_PING_SECONDS                (1*60)
+#define MASTERNODE_MIN_CONFIRMATIONS           7
+#define MASTERNODE_MIN_DSEEP_SECONDS           (15*60)
+#define MASTERNODE_MIN_DSEE_SECONDS            (1*60)
+#define MASTERNODE_PING_SECONDS                (10) //(1*60)
 #define MASTERNODE_EXPIRATION_SECONDS          (65*60)
 #define MASTERNODE_REMOVAL_SECONDS             (70*60)
 
@@ -61,7 +57,7 @@ int CountMasternodesAboveProtocol(int protocolVersion);
 void ProcessMessageMasternode(CNode* pfrom, std::string& strCommand, CDataStream& vRecv);
 
 //
-// The Masternode Class. For managing the darksend process. It contains the input of the 1000SLING, signature to prove
+// The Masternode Class. For managing the darksend process. It contains the input of the 1000GRAVITON, signature to prove
 // it's the one who own that ip address and code for calculating the payment election.
 //
 class CMasterNode
@@ -219,8 +215,8 @@ private:
 public:
 
     CMasternodePayments() {
-        strMainPubKey = "0435c38ffb14441df9894dca8741921d67a8130ff3c2fb81e2b0503b31722bae8f1a450865036c63044e0aa4708b205c575c7ddc18c73bd36641e20eceef8d095d";
-        strTestPubKey = "0435c38ffb14441df9894dca8741921d67a8130ff3c2fb81e2b0503b31722bae8f1a450865036c63044e0aa4708b205c575c7ddc18c73bd36641e20eceef8d095d";
+        strMainPubKey = "04265602999e3913bc66b390aa3bfc09c84af8e2defd8d1be13cd37a15e141eb5ebbe2513d6ec3a34361f9cd118f548ed34035393cf61c487a24aba6761e9b0867";
+        strTestPubKey = "04265602999e3913bc66b390aa3bfc09c84af8e2defd8d1be13cd37a15e141eb5ebbe2513d6ec3a34361f9cd118f548ed34035393cf61c487a24aba6761e9b0867";
         enabled = false;
     }
 

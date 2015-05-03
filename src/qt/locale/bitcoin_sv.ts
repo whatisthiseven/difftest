@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Sling</source>
-        <translation>Vad du behöver veta om Sling</translation>
+        <source>About Graviton</source>
+        <translation>Vad du behöver veta om Graviton</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Sling&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Sling&lt;/b&gt; version</translation>
+        <source>&lt;b&gt;Graviton&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Graviton&lt;/b&gt; version</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Sling developers</source>
+Copyright © 2014 The Graviton developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Sling developers</translation>
+Copyright © 2014 The Graviton developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -60,8 +60,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Sling addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Dessa är dina Sling adesser för att mottaga betalningsförsändelser. Du kan även använda olika adresser för varje avsändare för att enkelt hålla koll på vem som har skickat en betalning.</translation>
+        <source>These are your Graviton addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Dessa är dina Graviton adesser för att mottaga betalningsförsändelser. Du kan även använda olika adresser för varje avsändare för att enkelt hålla koll på vem som har skickat en betalning.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -75,8 +75,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Sling address</source>
-        <translation>Signera ett meddelande för att bevisa att du äger Sling adressen</translation>
+        <source>Sign a message to prove you own a Graviton address</source>
+        <translation>Signera ett meddelande för att bevisa att du äger Graviton adressen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -90,8 +90,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Sling address</source>
-        <translation>Verifiera ett meddelande för att försäkra dig över att det var signerat av en specifik Sling adress</translation>
+        <source>Verify a message to ensure it was signed with a specified Graviton address</source>
+        <translation>Verifiera ett meddelande för att försäkra dig över att det var signerat av en specifik Graviton adress</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -258,8 +258,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>Sling will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Sling plånboken kommer nu att stängas för att slutföra krypteringen: Kom ihåg att även en krypterad plånboks säkerhet kan äventyras genom keyloggers eller dylika malwares.</translation>
+        <source>Graviton will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Graviton plånboken kommer nu att stängas för att slutföra krypteringen: Kom ihåg att även en krypterad plånboks säkerhet kan äventyras genom keyloggers eller dylika malwares.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -352,8 +352,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Sling</source>
-        <translation>Visa information om Sling</translation>
+        <source>Show information about Graviton</source>
+        <translation>Visa information om Graviton</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -392,13 +392,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Sling address</source>
-        <translation>Skicka coins till en Sling adress</translation>
+        <source>Send coins to a Graviton address</source>
+        <translation>Skicka coins till en Graviton adress</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Sling</source>
-        <translation>Modifiera konfigurations-alternativ för Sling</translation>
+        <source>Modify configuration options for Graviton</source>
+        <translation>Modifiera konfigurations-alternativ för Graviton</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -438,8 +438,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Sling</source>
-        <translation>Sling</translation>
+        <source>Graviton</source>
+        <translation>Graviton</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -448,8 +448,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Sling</source>
-        <translation>&amp;Om Sling</translation>
+        <source>&amp;About Graviton</source>
+        <translation>&amp;Om Graviton</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Sling client</source>
-        <translation>Sling klient</translation>
+        <source>Graviton client</source>
+        <translation>Graviton klient</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Sling network</source>
-        <translation><numerusform>%n aktiv anslutning till Sling nätverket</numerusform><numerusform>%n aktiva anslutning till Sling nätverket</numerusform></translation>
+        <source>%n active connection(s) to Graviton network</source>
+        <translation><numerusform>%n aktiv anslutning till Graviton nätverket</numerusform><numerusform>%n aktiva anslutning till Graviton nätverket</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -600,8 +600,8 @@ Adress: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Sling address or malformed URI parameters.</source>
-        <translation>URI:n kan inte tolkas! Detta kan bero på en ogiltig Sling adress eller felaktiga URI parametrar.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Graviton address or malformed URI parameters.</source>
+        <translation>URI:n kan inte tolkas! Detta kan bero på en ogiltig Graviton adress eller felaktiga URI parametrar.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -723,8 +723,8 @@ Adress: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Sling can no longer continue safely and will quit.</source>
-        <translation>Ett fatalt fel uppstod. Sling kan inte fortsätta och stänger programmet.</translation>
+        <source>A fatal error occurred. Graviton can no longer continue safely and will quit.</source>
+        <translation>Ett fatalt fel uppstod. Graviton kan inte fortsätta och stänger programmet.</translation>
     </message>
 </context>
 <context>
@@ -1018,7 +1018,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message>
         <location line="+10"/>
         <source>The label associated with this address book entry</source>
-        <translation>Namnet som kopplats till denna Sling-adress</translation>
+        <translation>Namnet som kopplats till denna Graviton-adress</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1057,8 +1057,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Sling address.</source>
-        <translation>Den inslagna adressen &quot;%1&quot; är inte en giltig Sling adress.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Graviton address.</source>
+        <translation>Den inslagna adressen &quot;%1&quot; är inte en giltig Graviton adress.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1076,8 +1076,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Sling-Qt</source>
-        <translation>Sling-Qt</translation>
+        <source>Graviton-Qt</source>
+        <translation>Graviton-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1149,13 +1149,13 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Sling after logging in to the system.</source>
-        <translation>Starta Sling automatiskt vid inloggning.</translation>
+        <source>Automatically start Graviton after logging in to the system.</source>
+        <translation>Starta Graviton automatiskt vid inloggning.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Sling on system login</source>
-        <translation>&amp;Starta Sling vid inloggning</translation>
+        <source>&amp;Start Graviton on system login</source>
+        <translation>&amp;Starta Graviton vid inloggning</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1164,8 +1164,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Sling client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Öppna automatiskt Sling klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är aktiverat.</translation>
+        <source>Automatically open the Graviton client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Öppna automatiskt Graviton klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är aktiverat.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1174,8 +1174,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Sling network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Anslut till Sling nätverket via en SOCKS proxy (t.ex. när du ansluter genom Tor).</translation>
+        <source>Connect to the Graviton network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Anslut till Graviton nätverket via en SOCKS proxy (t.ex. när du ansluter genom Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1249,8 +1249,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Sling.</source>
-        <translation>Användargränssnittets språk kan ställas in här. Inställningen börjar gälla efter omstart av Sling.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Graviton.</source>
+        <translation>Användargränssnittets språk kan ställas in här. Inställningen börjar gälla efter omstart av Graviton.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1316,8 +1316,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Sling.</source>
-        <translation>Inställningen börjar gälla efter omstart av Sling.</translation>
+        <source>This setting will take effect after restarting Graviton.</source>
+        <translation>Inställningen börjar gälla efter omstart av Graviton.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1335,8 +1335,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Sling network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den visade informationen kan vara gammal. Din plånbok synkroniseras automatiskt med Sling nätverket efter att en anslutning skapats, men denna process är inte klar än.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Graviton network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den visade informationen kan vara gammal. Din plånbok synkroniseras automatiskt med Graviton nätverket efter att en anslutning skapats, men denna process är inte klar än.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1409,7 +1409,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start sling: click-to-pay handler</source>
+        <source>Cannot start graviton: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1577,8 +1577,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Sling-Qt help message to get a list with possible Sling command-line options.</source>
-        <translation>Visa Sling-Qt hjälp meddelandet för att få en lista över möjliga Sling kommandoradsalternativ.</translation>
+        <source>Show the Graviton-Qt help message to get a list with possible Graviton command-line options.</source>
+        <translation>Visa Graviton-Qt hjälp meddelandet för att få en lista över möjliga Graviton kommandoradsalternativ.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1597,13 +1597,13 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Sling - Debug window</source>
-        <translation>Sling - Felsökningsfönster</translation>
+        <source>Graviton - Debug window</source>
+        <translation>Graviton - Felsökningsfönster</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Sling Core</source>
-        <translation>Sling Core</translation>
+        <source>Graviton Core</source>
+        <translation>Graviton Core</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1612,8 +1612,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Sling debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Öppna Sling felsöknings-loggfilen från nuvarande data mapp. Detta kan kan ta ett par minuter för stora log filer.</translation>
+        <source>Open the Graviton debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Öppna Graviton felsöknings-loggfilen från nuvarande data mapp. Detta kan kan ta ett par minuter för stora log filer.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1622,8 +1622,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Sling RPC console.</source>
-        <translation>Välkommen till Sling RPC konsoll.</translation>
+        <source>Welcome to the Graviton RPC console.</source>
+        <translation>Välkommen till Graviton RPC konsoll.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1816,8 +1816,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Sling address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Fyll i en Sling adress (t.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Fyll i en Graviton adress (t.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1916,8 +1916,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Sling address</source>
-        <translation>VARNING: Ogiltig Sling adress</translation>
+        <source>WARNING: Invalid Graviton address</source>
+        <translation>VARNING: Ogiltig Graviton adress</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1990,8 +1990,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Sling address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Fyll i en Sling adress (t.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Fyll i en Graviton adress (t.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -2051,8 +2051,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Sling address</source>
-        <translation>Signera meddelandet för att verifiera att du äger denna Sling adressen</translation>
+        <source>Sign the message to prove you own this Graviton address</source>
+        <translation>Signera meddelandet för att verifiera att du äger denna Graviton adressen</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2083,8 +2083,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Sling address</source>
-        <translation>Verifiera meddelandet för att vara säker på att det var signerat med den angivna Sling adressen</translation>
+        <source>Verify the message to ensure it was signed with the specified Graviton address</source>
+        <translation>Verifiera meddelandet för att vara säker på att det var signerat med den angivna Graviton adressen</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2094,8 +2094,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Sling address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Fyll i en Sling adress (t.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Fyll i en Graviton adress (t.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2104,8 +2104,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Sling signature</source>
-        <translation>Fyll i Sling signatur</translation>
+        <source>Enter Graviton signature</source>
+        <translation>Fyll i Graviton signatur</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2683,8 +2683,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Sling version</source>
-        <translation>Sling version</translation>
+        <source>Graviton version</source>
+        <translation>Graviton version</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2693,8 +2693,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or slingd</source>
-        <translation>Skicka kommando till -server eller slingd</translation>
+        <source>Send command to -server or gravitond</source>
+        <translation>Skicka kommando till -server eller gravitond</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2713,13 +2713,13 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: sling.conf)</source>
-        <translation>Ange konfigurationsfilen (standard: sling.conf)</translation>
+        <source>Specify configuration file (default: graviton.conf)</source>
+        <translation>Ange konfigurationsfilen (standard: graviton.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: slingd.pid)</source>
-        <translation>Ange pid filen (standard slingd.pid)</translation>
+        <source>Specify pid file (default: gravitond.pid)</source>
+        <translation>Ange pid filen (standard gravitond.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2736,13 +2736,13 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=slingrpc
+rpcuser=gravitonrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Graviton Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2848,8 +2848,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Sling will not work properly.</source>
-        <translation>Varning: Kolla att din dators tid och datum är rätt. Sling kan inte fungera ordentligt om tiden i datorn är fel.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Graviton will not work properly.</source>
+        <translation>Varning: Kolla att din dators tid och datum är rätt. Graviton kan inte fungera ordentligt om tiden i datorn är fel.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -3155,7 +3155,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Sling is shutting down.</source>
+        <source>Initialization sanity check failed. Graviton is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3220,13 +3220,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Sling</source>
-        <translation>Kunde inte ladda wallet.dat: En nyare version av Sling krävs</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Graviton</source>
+        <translation>Kunde inte ladda wallet.dat: En nyare version av Graviton krävs</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Sling to complete</source>
-        <translation>Plånboken måste skrivas om: Starta om Sling för att slutföra</translation>
+        <source>Wallet needed to be rewritten: restart Graviton to complete</source>
+        <translation>Plånboken måste skrivas om: Starta om Graviton för att slutföra</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3290,8 +3290,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Sling is probably already running.</source>
-        <translation>Kan inte binda till %s på denna dator. Sling är sannolikt redan startad.</translation>
+        <source>Unable to bind to %s on this computer. Graviton is probably already running.</source>
+        <translation>Kan inte binda till %s på denna dator. Graviton är sannolikt redan startad.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3330,7 +3330,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Sling is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Graviton is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

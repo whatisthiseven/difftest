@@ -184,15 +184,9 @@ extern json_spirit::Value liststealthaddresses(const json_spirit::Array& params,
 extern json_spirit::Value importstealthaddress(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value sendtostealthaddress(const json_spirit::Array& params, bool fHelp);
 
-extern json_spirit::Value keepass(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value darksend(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value spork(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value masternode(const json_spirit::Array& params, bool fHelp);
-
-extern json_spirit::Value resetrichlist(const json_spirit::Array& params, bool fHelp);
-extern json_spirit::Value updaterichlist(const json_spirit::Array& params, bool fHelp);
-extern json_spirit::Value getrichlist(const json_spirit::Array& params, bool fHelp);
-extern json_spirit::Value getrichliststats(const json_spirit::Array& params, bool fHelp);
 
 extern json_spirit::Value smsgenable(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value smsgdisable(const json_spirit::Array& params, bool fHelp);

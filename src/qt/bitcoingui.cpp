@@ -33,7 +33,6 @@
 #include "init.h"
 #include "ui_interface.h"
 #include "masternodemanager.h"
-#include "richlist.h"
 #include "messagemodel.h"
 #include "messagepage.h"
 
@@ -89,8 +88,8 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     prevBlocks(0),
     nWeight(0)
 {
-    resize(720, 405);
-    setWindowTitle(tr("Sling") + " - " + tr("Wallet"));
+    resize(798, 640);
+    setWindowTitle(tr("Graviton") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -98,8 +97,8 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     //setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
-    setObjectName("sling");
-    setStyleSheet("#sling { background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 1.4, stop: 0 #efefef, stop: 1 #dedede);  }");
+    setObjectName("graviton");
+    setStyleSheet("#graviton { background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 1.4, stop: 0 #dedede, stop: 1 #efefef);  }");
     // Accept D&D of URIs
     setAcceptDrops(true);
 
@@ -133,20 +132,16 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     signVerifyMessageDialog = new SignVerifyMessageDialog(this);
 
     masternodeManagerPage = new MasternodeManager(this);
-
-    richListPage = new RichListPage(this);
     messagePage = new MessagePage(this);
     
     centralStackedWidget = new QStackedWidget(this);
     centralStackedWidget->setContentsMargins(0, 0, 0, 0);
     centralStackedWidget->addWidget(overviewPage);
-    //centralStackedWidget->addWidget(overviewWidget);
     centralStackedWidget->addWidget(transactionsPage);
     centralStackedWidget->addWidget(addressBookPage);
     centralStackedWidget->addWidget(receiveCoinsPage);
     centralStackedWidget->addWidget(sendCoinsPage);
     centralStackedWidget->addWidget(masternodeManagerPage);
-    centralStackedWidget->addWidget(richListPage);
     centralStackedWidget->addWidget(messagePage);
 
     QWidget *centralWidget = new QWidget();
@@ -186,11 +181,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     frameBlocksLayout->addWidget(labelBlocksIcon);
     frameBlocksLayout->addStretch();
 
-    netLabel = new QLabel();
-    netLabel->setObjectName("netLabel");
-    netLabel->setStyleSheet("#netLabel { color: #efefef; }");
-    frameBlocksLayout->addWidget(netLabel);
-
     frameBlocksLayout->addStretch();
     
 
@@ -198,7 +188,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     {
         QTimer *timerStakingIcon = new QTimer(labelStakingIcon);
         connect(timerStakingIcon, SIGNAL(timeout()), this, SLOT(updateStakingIcon()));
-        timerStakingIcon->start(30 * 1000);
+        timerStakingIcon->start(20 * 1000);
         updateStakingIcon();
     }
 
@@ -225,7 +215,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     statusBar()->addWidget(progressBar);
     statusBar()->addPermanentWidget(frameBlocks);
     statusBar()->setObjectName("statusBar");
-    statusBar()->setStyleSheet("#statusBar { color: #ffffff; background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 0.6, stop: 0 #404040, stop: 1 #101010);  }");
+    statusBar()->setStyleSheet("#statusBar { color: #ffffff; background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 0.6, stop: 0 #101010, stop: 1 #404040);  }");
 
     syncIconMovie = new QMovie(fUseBlackTheme ? ":/movies/update_spinner_black" : ":/movies/update_spinner", "mng", this);
 
@@ -275,7 +265,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(receiveCoinsAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setToolTip(tr("Send coins to a Sling address"));
+    sendCoinsAction->setToolTip(tr("Send coins to a Graviton address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
     tabGroup->addAction(sendCoinsAction);
@@ -286,23 +276,18 @@ void BitcoinGUI::createActions()
     historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
     tabGroup->addAction(historyAction);
 
-    addressBookAction = new QAction(QIcon(":/icons/address-book"), tr("&Address Book"), this);
+    addressBookAction = new QAction(QIcon(":/icons/address-book"), tr("&Addresses"), this);
     addressBookAction->setToolTip(tr("Edit the list of stored addresses and labels"));
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
 
-    masternodeManagerAction = new QAction(QIcon(":/icons/bitcoin"), tr("&SlingShot"), this);
-    masternodeManagerAction->setToolTip(tr("Show SlingShot Nodes status and configure your nodes."));
+    masternodeManagerAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Gravitators"), this);
+    masternodeManagerAction->setToolTip(tr("Show Gravitator Nodes status and configure your nodes."));
     masternodeManagerAction->setCheckable(true);
     tabGroup->addAction(masternodeManagerAction);
 
-    richListPageAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Rich List"), this);
-    richListPageAction->setToolTip(tr("Show top Sling balances."));
-    richListPageAction->setCheckable(true);
-    tabGroup->addAction(richListPageAction);
-
-    messageAction = new QAction(QIcon(":/icons/edit"), tr("Sling&IT"), this);
+    messageAction = new QAction(QIcon(":/icons/edit"), tr("&Messages"), this);
     messageAction->setToolTip(tr("View and Send Encrypted messages"));
     messageAction->setCheckable(true);
     tabGroup->addAction(messageAction);
@@ -319,8 +304,6 @@ void BitcoinGUI::createActions()
     connect(addressBookAction, SIGNAL(triggered()), this, SLOT(gotoAddressBookPage()));
     connect(masternodeManagerAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(masternodeManagerAction, SIGNAL(triggered()), this, SLOT(gotoMasternodeManagerPage()));
-    connect(richListPageAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
-    connect(richListPageAction, SIGNAL(triggered()), this, SLOT(gotoRichListPage()));
     connect(messageAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(messageAction, SIGNAL(triggered()), this, SLOT(gotoMessagePage()));
 
@@ -328,14 +311,14 @@ void BitcoinGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(tr("&About Sling"), this);
-    aboutAction->setToolTip(tr("Show information about Sling"));
+    aboutAction = new QAction(tr("&About Graviton"), this);
+    aboutAction->setToolTip(tr("Show information about Graviton"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for Sling"));
+    optionsAction->setToolTip(tr("Modify configuration options for Graviton"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
     encryptWalletAction = new QAction(tr("&Encrypt Wallet..."), this);
@@ -416,13 +399,13 @@ void BitcoinGUI::createToolBars()
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
     toolbar->setObjectName("tabs");
-    toolbar->setStyleSheet("QToolButton { color: #ffffff; } QToolButton:hover { background-color: #050817 } QToolButton:checked { background-color: #152443 } QToolButton:pressed { background-color: #152443 } #tabs { color: #ffffff; background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 0.6, stop: 0 #404040, stop: 1 #101010);  }");
+    toolbar->setStyleSheet("QToolButton { color: #ffffff; } QToolButton:hover { background-color: #3CB0E8 } QToolButton:checked { background-color: #164356 } QToolButton:pressed { background-color: #164356 } #tabs { color: #ffffff; background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 0.6, stop: 0 #404040, stop: 1 #101010);  }");
 
     QLabel* header = new QLabel();
-    header->setMinimumSize(48, 48);
+    header->setMinimumSize(128, 128);
     header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     header->setPixmap(QPixmap(":/icons/bitcoin"));
-    header->setMaximumSize(48,48);
+    header->setMaximumSize(180,180);
     header->setScaledContents(true);
     toolbar->addWidget(header);
 
@@ -433,31 +416,18 @@ void BitcoinGUI::createToolBars()
     toolbar->addAction(historyAction);
     toolbar->addAction(addressBookAction);
     toolbar->addAction(masternodeManagerAction);
-    toolbar->addAction(richListPageAction);
     toolbar->addAction(messageAction);
 
-    toolbar->setOrientation(Qt::Horizontal);
+    QWidget *spacer = makeToolBarSpacer();
+    toolbar->addWidget(spacer);
+    toolbar->setOrientation(Qt::Vertical);
     toolbar->setMovable(false);
 
-    addToolBar(Qt::TopToolBarArea, toolbar);
+    addToolBar(Qt::LeftToolBarArea, toolbar);
 }
 
 void BitcoinGUI::setClientModel(ClientModel *clientModel)
 {
-    if(!fOnlyTor)
-	netLabel->setText("CLEARNET");
-    else
-    {
-	if(!IsLimited(NET_TOR))
-	{
-	    netLabel->setMinimumSize(48, 48);
-    	    netLabel->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    	    netLabel->setPixmap(QPixmap(":/icons/onion"));
-    	    netLabel->setMaximumSize(48,48);
-    	    netLabel->setScaledContents(true);
-	}
-    }
-
     this->clientModel = clientModel;
     if(clientModel)
     {
@@ -473,7 +443,7 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
 #endif
             if(trayIcon)
             {
-                trayIcon->setToolTip(tr("Sling client") + QString(" ") + tr("[testnet]"));
+                trayIcon->setToolTip(tr("Graviton client") + QString(" ") + tr("[testnet]"));
                 trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
                 toggleHideAction->setIcon(QIcon(":/icons/toolbar_testnet"));
             }
@@ -548,7 +518,7 @@ void BitcoinGUI::createTrayIcon()
     trayIcon = new QSystemTrayIcon(this);
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setToolTip(tr("Sling client"));
+    trayIcon->setToolTip(tr("Graviton client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
@@ -618,7 +588,7 @@ void BitcoinGUI::setNumConnections(int count)
     default: icon = fUseBlackTheme ? ":/icons/black/connect_4" : ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Sling network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Graviton network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count)
@@ -703,7 +673,7 @@ void BitcoinGUI::setNumBlocks(int count)
 
 void BitcoinGUI::message(const QString &title, const QString &message, bool modal, unsigned int style)
 {
-    QString strTitle = tr("Sling") + " - ";
+    QString strTitle = tr("Graviton") + " - ";
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -872,20 +842,7 @@ void BitcoinGUI::clearWidgets()
 void BitcoinGUI::gotoMasternodeManagerPage()
 {
     masternodeManagerAction->setChecked(true);
-    //clearWidgets();
-
-    //masternodeManagerPage = new MasternodeManager(this);
-    //centralStackedWidget->addWidget(masternodeManagerPage);
     centralStackedWidget->setCurrentWidget(masternodeManagerPage);
-
-    exportAction->setEnabled(false);
-    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
-}
-
-void BitcoinGUI::gotoRichListPage()
-{
-    richListPageAction->setChecked(true);
-    centralStackedWidget->setCurrentWidget(richListPage);
 
     exportAction->setEnabled(false);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
@@ -894,8 +851,6 @@ void BitcoinGUI::gotoRichListPage()
 void BitcoinGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
-
-    //clearWidgets();
     centralStackedWidget->setCurrentWidget(overviewPage);
 
     exportAction->setEnabled(false);
@@ -905,19 +860,7 @@ void BitcoinGUI::gotoOverviewPage()
 void BitcoinGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
-    //clearWidgets();
-
-    /*transactionsPage = new QWidget(this);
-    QVBoxLayout *vbox = new QVBoxLayout();
-    transactionView = new TransactionView(this);
-    vbox->addWidget(transactionView);
-    transactionsPage->setLayout(vbox);
-    centralStackedWidget->addWidget(transactionsPage);*/
     centralStackedWidget->setCurrentWidget(transactionsPage);
-
-    //connect(transactionView, SIGNAL(doubleClicked(QModelIndex)), transactionView, SLOT(showDetails()));
-
-    //transactionView->setModel(this->walletModel);
 
     exportAction->setEnabled(true);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
@@ -927,13 +870,6 @@ void BitcoinGUI::gotoHistoryPage()
 void BitcoinGUI::gotoAddressBookPage()
 {
     addressBookAction->setChecked(true);
-    //clearWidgets();
-    //addressBookPage = new AddressBookPage(AddressBookPage::ForEditing, AddressBookPage::SendingTab);
-    //addressBookPage->setOptionsModel(this->clientModel->getOptionsModel());
-    //addressBookPage->setModel(this->walletModel->getAddressTableModel());
-    // Clicking on "Verify Message" in the address book sends you to the verify message tab
-    //connect(addressBookPage, SIGNAL(verifyMessage(QString)), this, SLOT(gotoVerifyMessageTab(QString)));
-    //centralStackedWidget->addWidget(addressBookPage);
     centralStackedWidget->setCurrentWidget(addressBookPage);
 
     exportAction->setEnabled(true);
@@ -944,13 +880,6 @@ void BitcoinGUI::gotoAddressBookPage()
 void BitcoinGUI::gotoReceiveCoinsPage()
 {
     receiveCoinsAction->setChecked(true);
-    //clearWidgets();
-    //receiveCoinsPage = new AddressBookPage(AddressBookPage::ForEditing, AddressBookPage::ReceivingTab);
-    //receiveCoinsPage->setOptionsModel(this->clientModel->getOptionsModel());
-    //receiveCoinsPage->setModel(this->walletModel->getAddressTableModel());
-    // Clicking on "Sign Message" in the receive coins page sends you to the sign message tab
-    //connect(receiveCoinsPage, SIGNAL(signMessage(QString)), this, SLOT(gotoSignMessageTab(QString)));
-    //centralStackedWidget->addWidget(receiveCoinsPage);
     centralStackedWidget->setCurrentWidget(receiveCoinsPage);
 
     exportAction->setEnabled(true);
@@ -961,10 +890,7 @@ void BitcoinGUI::gotoReceiveCoinsPage()
 void BitcoinGUI::gotoSendCoinsPage()
 {
     sendCoinsAction->setChecked(true);
-    //sendCoinsPage = new SendCoinsDialog(this);
-    //centralStackedWidget->addWidget(sendCoinsPage);
     centralStackedWidget->setCurrentWidget(sendCoinsPage);
-    //sendCoinsPage->setModel(this->walletModel);
 
     exportAction->setEnabled(false);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
@@ -1021,7 +947,7 @@ void BitcoinGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             gotoSendCoinsPage();
         else
-            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Sling address or malformed URI parameters."));
+            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Graviton address or malformed URI parameters."));
     }
 
     event->acceptProposedAction();
@@ -1036,7 +962,7 @@ void BitcoinGUI::handleURI(QString strURI)
         gotoSendCoinsPage();
     }
     else
-        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Sling address or malformed URI parameters."));
+        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Graviton address or malformed URI parameters."));
 }
 
 void BitcoinGUI::setEncryptionStatus(int status)

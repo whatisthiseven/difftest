@@ -17,7 +17,6 @@
 #include "key.h"
 #include "spork.h"
 #include "darksend.h"
-#include "keepass.h"
 #include "instantx.h"
 #include "masternode.h"
 #include "chainparams.h"
@@ -35,7 +34,7 @@ int64_t nReserveBalance = 0;
 int64_t nMinimumInputValue = 0;
 
 static unsigned int GetStakeSplitAge() { return 9 * 24 * 60 * 60; }
-static int64_t GetStakeCombineThreshold() { return 1000 * COIN; }
+static int64_t GetStakeCombineThreshold() { return 100 * COIN; }
 
 int64_t gcd(int64_t n,int64_t m) { return m == 0 ? n : gcd(m, n % m); }
 static uint64_t CoinWeightCost(const COutput &out)
@@ -210,17 +209,7 @@ bool CWallet::Unlock(const SecureString& strWalletPassphrase, bool anonymizeOnly
 	return true;
     }
 
-    // Verify KeePassIntegration
-    if(strWalletPassphrase == "keepass" && GetBoolArg("-keepass", false)) {
-        try {
-            strWalletPassphraseFinal = keePassInt.retrievePassphrase();
-        } catch (std::exception& e) {
-            LogPrintf("CWallet::Unlock could not retrieve passphrase from KeePass: Error: %s\n", e.what());
-            return false;
-        }
-    } else {
-        strWalletPassphraseFinal = strWalletPassphrase;
-    }
+    strWalletPassphraseFinal = strWalletPassphrase;
 
     CCrypter crypter;
     CKeyingMaterial vMasterKey;
@@ -248,24 +237,10 @@ bool CWallet::Unlock(const SecureString& strWalletPassphrase, bool anonymizeOnly
 bool CWallet::ChangeWalletPassphrase(const SecureString& strOldWalletPassphrase, const SecureString& strNewWalletPassphrase)
 {
     bool fWasLocked = IsLocked();
-    bool bUseKeePass = false;
-
-    SecureString strOldWalletPassphraseFinal;
-
-    // Verify KeePassIntegration
-    if(strOldWalletPassphrase == "keepass" && GetBoolArg("-keepass", false)) {
-        bUseKeePass = true;
-        try {
-            strOldWalletPassphraseFinal = keePassInt.retrievePassphrase();
-        } catch (std::exception& e) {
-            LogPrintf("CWallet::ChangeWalletPassphrase could not retrieve passphrase from KeePass: Error: %s\n", e.what());
-            return false;
-        }
-    } else {
-        strOldWalletPassphraseFinal = strOldWalletPassphrase;
-    }
-
-
+    
+    SecureString strOldWalletPassphraseFinal;    
+    strOldWalletPassphraseFinal = strOldWalletPassphrase;
+    
     {
         LOCK(cs_wallet);
         Lock();
@@ -301,17 +276,6 @@ bool CWallet::ChangeWalletPassphrase(const SecureString& strOldWalletPassphrase,
                 CWalletDB(strWalletFile).WriteMasterKey(pMasterKey.first, pMasterKey.second);
                 if (fWasLocked)
                     Lock();
-
-                // Update KeePass if necessary
-                if(bUseKeePass) {
-                    LogPrintf("CWallet::ChangeWalletPassphrase - Updating KeePass with new passphrase");
-                    try {
-                        keePassInt.updatePassphrase(strNewWalletPassphrase);
-                    } catch (std::exception& e) {
-                        LogPrintf("CWallet::ChangeWalletPassphrase - could not update passphrase in KeePass: Error: %s\n", e.what());
-                        return false;
-                    }
-                }
 
                 return true;
             }
@@ -468,17 +432,6 @@ bool CWallet::EncryptWallet(const SecureString& strWalletPassphrase)
         // Need to completely rewrite the wallet file; if we don't, bdb might keep
         // bits of the unencrypted private key in slack space in the database file.
         CDB::Rewrite(strWalletFile);
-
-        // Update KeePass if necessary
-        if(GetBoolArg("-keepass", false)) {
-            LogPrintf("CWallet::EncryptWallet - Updating KeePass with new passphrase");
-            try {
-                keePassInt.updatePassphrase(strWalletPassphrase);
-            } catch (std::exception& e) {
-                LogPrintf("CWallet::EncryptWallet - could not update passphrase in KeePass: Error: %s\n", e.what());
-            }
-        }
-
 
     }
     NotifyStatusChanged(this);
@@ -920,7 +873,7 @@ void CWalletTx::GetAmounts(list<pair<CTxDestination, int64_t> >& listReceived,
         if (nDebit > 0)
         {
             // Don't report 'change' txouts
-	    // SLINGNOTE: CoinControl possible fix related... with HD wallet we need to report change?
+	    // GRAVITONNOTE: CoinControl possible fix related... with HD wallet we need to report change?
             //if (pwallet->IsChange(txout))
             //    continue;
             fIsMine = pwallet->IsMine(txout);
@@ -1170,16 +1123,7 @@ void CWalletTx::RelayWalletTransaction()
 
 void CWallet::ResendWalletTransactions(bool fForce)
 {
-    // Only Once Broadcasting
-    // Don't rebroadcast our wallet tx's, to avoid giving away that
-    // these are our transactions.
-    // If it doesn't make it into a block because the user is not
-    // well connected to other nodes etc., the user
-    // can use resendtx or use a 3rd party service to relay the tx
-    // so, just return here
-    return;
-
-    /*if (!fForce)
+    if (!fForce)
     {
         // Do this infrequently and randomly to avoid giving away
         // that these are our transactions.
@@ -1221,7 +1165,7 @@ void CWallet::ResendWalletTransactions(bool fForce)
             else
                 LogPrintf("ResendWalletTransactions() : CheckTransaction failed for transaction %s\n", wtx.GetHash().ToString());
         }
-    }*/
+    }
 }
 
 
@@ -1468,7 +1412,7 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 continue;
 
             int nDepth = pcoin->GetDepthInMainChain();
-            if (nDepth <= 0) // SLINGNOTE: coincontrol fix / ignore 0 confirm 
+            if (nDepth <= 0) // GRAVITONNOTE: coincontrol fix / ignore 0 confirm 
                 continue;
 
            /* for (unsigned int i = 0; i < pcoin->vout.size(); i++)
@@ -1489,7 +1433,7 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                     found = true;
                     if (IsCollateralAmount(pcoin->vout[i].nValue)) continue; // do not use collateral amounts
                     found = !IsDenominatedAmount(pcoin->vout[i].nValue);
-                    if(found && coin_type == ONLY_NONDENOMINATED_NOTMN) found = (pcoin->vout[i].nValue != 7331*COIN); // do not use MN funds
+                    if(found && coin_type == ONLY_NONDENOMINATED_NOTMN) found = (pcoin->vout[i].nValue != 25000*COIN); // do not use MN funds
                 } else {
                     found = true;
                 }
@@ -1535,7 +1479,7 @@ void CWallet::AvailableCoinsMN(vector<COutput>& vCoins, bool fOnlyConfirmed, con
                 continue;
 
             int nDepth = pcoin->GetDepthInMainChain();
-            if (nDepth <= 0) // SLINGNOTE: coincontrol fix / ignore 0 confirm 
+            if (nDepth <= 0) // GRAVITONNOTE: coincontrol fix / ignore 0 confirm 
                 continue;
 
            /* for (unsigned int i = 0; i < pcoin->vout.size(); i++)
@@ -1556,7 +1500,7 @@ void CWallet::AvailableCoinsMN(vector<COutput>& vCoins, bool fOnlyConfirmed, con
                     found = true;
                     if (IsCollateralAmount(pcoin->vout[i].nValue)) continue; // do not use collateral amounts
                     found = !IsDenominatedAmount(pcoin->vout[i].nValue);
-                    if(found && coin_type == ONLY_NONDENOMINATED_NOTMN) found = (pcoin->vout[i].nValue != 7331*COIN); // do not use MN funds
+                    if(found && coin_type == ONLY_NONDENOMINATED_NOTMN) found = (pcoin->vout[i].nValue != 25000*COIN); // do not use MN funds
                 } else {
                     found = true;
                 }
@@ -2063,7 +2007,7 @@ bool CWallet::SelectCoins(int64_t nTargetValue, unsigned int nSpendTime, set<pai
     vector<COutput> vCoins;
     AvailableCoins(vCoins, true, coinControl);
 
-    //if we're doing only denominated, we need to round up to the nearest .1SLING
+    //if we're doing only denominated, we need to round up to the nearest .1GRAVITON
     if(coin_type == ONLY_DENOMINATED){
         // Make outputs by looping through denominations, from large to small
         BOOST_FOREACH(int64_t v, darkSendDenominations)
@@ -2072,7 +2016,7 @@ bool CWallet::SelectCoins(int64_t nTargetValue, unsigned int nSpendTime, set<pai
             BOOST_FOREACH(const COutput& out, vCoins)
             {
                 if(out.tx->vout[out.i].nValue == v                                            //make sure it's the denom we're looking for
-                    && nValueRet + out.tx->vout[out.i].nValue < nTargetValue + (0.1*COIN)+100 //round the amount up to .1SLING over
+                    && nValueRet + out.tx->vout[out.i].nValue < nTargetValue + (0.1*COIN)+100 //round the amount up to .1GRAVITON over
                     && added <= 100){                                                          //don't add more than 100 of one denom type
                         CTxIn vin = CTxIn(out.tx->GetHash(),out.i);
                         int rounds = GetInputDarksendRounds(vin);
@@ -2193,16 +2137,16 @@ bool CWallet::SelectCoinsByDenominations(int nDenom, int64_t nValueMin, int64_t 
     {
         //there's no reason to allow inputs less than 1 COIN into DS (other than denominations smaller than that amount)
         if(out.tx->vout[out.i].nValue < 1*COIN && out.tx->vout[out.i].nValue != (.1*COIN)+100) continue;
-        if(fMasterNode && out.tx->vout[out.i].nValue == 7331*COIN) continue; //masternode input
+        if(fMasterNode && out.tx->vout[out.i].nValue == 25000*COIN) continue; //masternode input
         if(nValueRet + out.tx->vout[out.i].nValue <= nValueMax){
             bool fAccepted = false;
 
             // Function returns as follows:
             //
-            // bit 0 - 100SLING+1 ( bit on if present )
-            // bit 1 - 10SLING+1
-            // bit 2 - 1SLING+1
-            // bit 3 - .1SLING+1
+            // bit 0 - 100GRAVITON+1 ( bit on if present )
+            // bit 1 - 10GRAVITON+1
+            // bit 2 - 1GRAVITON+1
+            // bit 3 - .1GRAVITON+1
 
             CTxIn vin = CTxIn(out.tx->GetHash(),out.i);
 
@@ -2269,7 +2213,7 @@ bool CWallet::SelectCoinsDark(int64_t nValueMin, int64_t nValueMax, std::vector<
     {
         //there's no reason to allow inputs less than 1 COIN into DS (other than denominations smaller than that amount)
         if(out.tx->vout[out.i].nValue < 1*COIN && out.tx->vout[out.i].nValue != (.1*COIN)+100) continue;
-        if(fMasterNode && out.tx->vout[out.i].nValue == 7331*COIN) continue; //masternode input
+        if(fMasterNode && out.tx->vout[out.i].nValue == 25000*COIN) continue; //masternode input
 
         if(nValueRet + out.tx->vout[out.i].nValue <= nValueMax){
             CTxIn vin = CTxIn(out.tx->GetHash(),out.i);
@@ -2500,7 +2444,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend, 
                     } else if (coin_type == ONLY_NONDENOMINATED) {
                         strFailReason = _("Unable to locate enough Darksend non-denominated funds for this transaction.");
                     } else if (coin_type == ONLY_NONDENOMINATED_NOTMN) {
-                        strFailReason = _("Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 SLING.");
+                        strFailReason = _("Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 GRAVITON.");
                     } else {
                         strFailReason = _("Unable to locate enough Darksend denominated funds for this transaction.");
                         strFailReason += _("Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.");
@@ -3485,7 +3429,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
                 vwtxPrev.push_back(pcoin.first);
                 txNew.vout.push_back(CTxOut(0, scriptPubKeyOut));
 
-                if (GetWeight(nBlockTime, (int64_t)txNew.nTime) < GetStakeSplitAge())
+                if(nCredit > 100 * COIN)
                     txNew.vout.push_back(CTxOut(0, scriptPubKeyOut)); //split stake
                 LogPrint("coinstake", "CreateCoinStake : added kernel type=%d\n", whichType);
                 fKernelFound = true;
@@ -3539,7 +3483,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
         if (!txNew.GetCoinAge(txdb, nCoinAge))
             return error("CreateCoinStake : failed to calculate coin age");
 
-        nReward = GetProofOfStakeReward(nCoinAge, nFees);
+        nReward = GetProofOfStakeReward(pindexPrev->nHeight + 1, nCoinAge, nFees);
         if (nReward <= 0)
             return false;
 

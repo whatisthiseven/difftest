@@ -46,7 +46,7 @@ Value getsubsidy(const Array& params, bool fHelp)
             "getsubsidy [nTarget]\n"
             "Returns proof-of-work subsidy value for the specified value of target.");
 
-    return (uint64_t)GetProofOfWorkReward(0);
+    return (uint64_t)GetProofOfWorkReward(pindexBest->nHeight, 0);
 }
 
 Value getstakesubsidy(const Array& params, bool fHelp)
@@ -73,7 +73,7 @@ Value getstakesubsidy(const Array& params, bool fHelp)
     if (!tx.GetCoinAge(txdb, nCoinAge))
         throw JSONRPCError(RPC_MISC_ERROR, "GetCoinAge failed");
 
-    return (uint64_t)GetProofOfStakeReward(nCoinAge, 0);
+    return (uint64_t)GetProofOfStakeReward(pindexBest->nHeight, nCoinAge, 0);
 }
 
 Value getmininginfo(const Array& params, bool fHelp)
@@ -97,7 +97,7 @@ Value getmininginfo(const Array& params, bool fHelp)
     diff.push_back(Pair("search-interval",      (int)nLastCoinStakeSearchInterval));
     obj.push_back(Pair("difficulty",    diff));
 
-    obj.push_back(Pair("blockvalue",    (uint64_t)GetProofOfWorkReward(0)));
+    obj.push_back(Pair("blockvalue",    (uint64_t)GetProofOfWorkReward(pindexBest->nHeight, 0)));
     obj.push_back(Pair("netmhashps",     GetPoWMHashPS()));
     obj.push_back(Pair("netstakeweight", GetPoSKernelPS()));
     obj.push_back(Pair("errors",        GetWarnings("statusbar")));
@@ -162,10 +162,10 @@ Value checkkernel(const Array& params, bool fHelp)
     bool fCreateBlockTemplate = params.size() > 1 ? params[1].get_bool() : false;
 
     if (vNodes.empty())
-        throw JSONRPCError(-9, "Sling is not connected!");
+        throw JSONRPCError(-9, "Graviton is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(-10, "Sling is downloading blocks...");
+        throw JSONRPCError(-10, "Graviton is downloading blocks...");
 
     COutPoint kernel;
     CBlockIndex* pindexPrev = pindexBest;
@@ -243,10 +243,10 @@ Value getworkex(const Array& params, bool fHelp)
         );
 
     if (vNodes.empty())
-        throw JSONRPCError(-9, "Sling is not connected!");
+        throw JSONRPCError(-9, "Graviton is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(-10, "Sling is downloading blocks...");
+        throw JSONRPCError(-10, "Graviton is downloading blocks...");
 
     if (pindexBest->nHeight >= Params().LastPOWBlock())
         throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
@@ -377,10 +377,10 @@ Value getwork(const Array& params, bool fHelp)
             "If [data] is specified, tries to solve the block and returns true if it was successful.");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Sling is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Graviton is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Sling is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Graviton is downloading blocks...");
 
     if (pindexBest->nHeight >= Params().LastPOWBlock())
         throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
@@ -521,10 +521,10 @@ Value getblocktemplate(const Array& params, bool fHelp)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Sling is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Graviton is not connected!");
 
     //if (IsInitialBlockDownload())
-    //    throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Sling is downloading blocks...");
+    //    throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Graviton is downloading blocks...");
 
     if (pindexBest->nHeight >= Params().LastPOWBlock())
         throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");

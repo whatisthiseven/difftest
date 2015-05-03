@@ -202,10 +202,10 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "Stop Sling server.");
+            "Stop Graviton server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "Sling server stopping";
+    return "Graviton server stopping";
 }
 
 
@@ -251,13 +251,6 @@ static const CRPCCommand vRPCCommands[] =
     { "darksend",               &darksend,               false,     false,      true },
     { "spork",                  &spork,                  true,      false,      false },
     { "masternode",             &masternode,             true,      false,      true },
-    { "keepass",                &keepass,                false,     false,      true },
-
-/* RICH LIST */
-    { "resetrichlist",          &resetrichlist,          true,      false,      false },
-    { "updaterichlist",         &updaterichlist,         true,      false,      false },
-    { "getrichlist",            &getrichlist,            true,      false,      false },
-    { "getrichliststats",       &getrichliststats,       true,      false,      false },
 
 #ifdef ENABLE_WALLET
     { "getmininginfo",          &getmininginfo,          true,      false,     false },
@@ -521,7 +514,7 @@ void StartRPCThreads()
     {
         unsigned char rand_pwd[32];
         RAND_bytes(rand_pwd, 32);
-        string strWhatAmI = "To use slingd";
+        string strWhatAmI = "To use gravitond";
         if (mapArgs.count("-server"))
             strWhatAmI = strprintf(_("To use the %s option"), "\"-server\"");
         else if (mapArgs.count("-daemon"))
@@ -530,13 +523,13 @@ void StartRPCThreads()
             _("%s, you must set a rpcpassword in the configuration file:\n"
               "%s\n"
               "It is recommended you use the following random password:\n"
-              "rpcuser=slingrpc\n"
+              "rpcuser=gravitonrpc\n"
               "rpcpassword=%s\n"
               "(you do not need to remember this password)\n"
               "The username and password MUST NOT be the same.\n"
               "If the file does not exist, create it with owner-readable-only file permissions.\n"
               "It is also recommended to set alertnotify so you are notified of problems;\n"
-              "for example: alertnotify=echo %%s | mail -s \"Sling Alert\" admin@foo.com\n"),
+              "for example: alertnotify=echo %%s | mail -s \"Graviton Alert\" admin@foo.com\n"),
                 strWhatAmI,
                 GetConfigFile().string(),
                 EncodeBase58(&rand_pwd[0],&rand_pwd[0]+32)),

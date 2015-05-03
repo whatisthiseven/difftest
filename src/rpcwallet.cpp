@@ -12,9 +12,6 @@
 #include "util.h"
 #include "wallet.h"
 #include "walletdb.h"
-#include "keepass.h"
-#include "richlistdata.h"
-#include "richlistdb.h"
 
 using namespace std;
 using namespace json_spirit;
@@ -111,7 +108,7 @@ Value getnewaddress(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getnewaddress [account]\n"
-            "Returns a new Sling address for receiving payments.  "
+            "Returns a new Graviton address for receiving payments.  "
             "If [account] is specified, it is added to the address book "
             "so payments received with the address will be credited to [account].");
 
@@ -178,7 +175,7 @@ Value getaccountaddress(const Array& params, bool fHelp)
     if (fHelp || params.size() != 1)
         throw runtime_error(
             "getaccountaddress <account>\n"
-            "Returns the current Sling address for receiving payments to this account.");
+            "Returns the current Graviton address for receiving payments to this account.");
 
     // Parse the account first so we don't generate a key if there's an error
     string strAccount = AccountFromValue(params[0]);
@@ -196,12 +193,12 @@ Value setaccount(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "setaccount <slingaddress> <account>\n"
+            "setaccount <gravitonaddress> <account>\n"
             "Sets the account associated with the given address.");
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Sling address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Graviton address");
 
 
     string strAccount;
@@ -226,12 +223,12 @@ Value getaccount(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "getaccount <slingaddress>\n"
+            "getaccount <gravitonaddress>\n"
             "Returns the account associated with the given address.");
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Sling address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Graviton address");
 
     string strAccount;
     map<CTxDestination, string>::iterator mi = pwalletMain->mapAddressBook.find(address.Get());
@@ -266,13 +263,13 @@ Value sendtoaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 5)
         throw runtime_error(
-            "sendtoaddress <slingaddress> <amount> [comment] [comment-to] [narration]\n"
+            "sendtoaddress <gravitonaddress> <amount> [comment] [comment-to] [narration]\n"
             "<amount> is a real and is rounded to the nearest 0.000001"
             + HelpRequiringPassphrase());
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Sling address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Graviton address");
 
     // Amount
     int64_t nAmount = AmountFromValue(params[1]);
@@ -336,7 +333,7 @@ Value signmessage(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "signmessage <slingaddress> <message>\n"
+            "signmessage <gravitonaddress> <message>\n"
             "Sign a message with the private key of an address");
 
     EnsureWalletIsUnlocked();
@@ -371,14 +368,14 @@ Value getreceivedbyaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "getreceivedbyaddress <slingaddress> [minconf=1]\n"
-            "Returns the total amount received by <slingaddress> in transactions with at least [minconf] confirmations.");
+            "getreceivedbyaddress <gravitonaddress> [minconf=1]\n"
+            "Returns the total amount received by <gravitonaddress> in transactions with at least [minconf] confirmations.");
 
     // Bitcoin address
     CBitcoinAddress address = CBitcoinAddress(params[0].get_str());
     CScript scriptPubKey;
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Sling address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Graviton address");
     scriptPubKey.SetDestination(address.Get());
     if (!IsMine(*pwalletMain,scriptPubKey))
         return (double)0.0;
@@ -599,14 +596,14 @@ Value sendfrom(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 3 || params.size() > 7)
         throw runtime_error(
-            "sendfrom <fromaccount> <toslingaddress> <amount> [minconf=1] [comment] [comment-to] [narration]\n"
+            "sendfrom <fromaccount> <togravitonaddress> <amount> [minconf=1] [comment] [comment-to] [narration]\n"
             "<amount> is a real and is rounded to the nearest 0.000001"
             + HelpRequiringPassphrase());
 
     string strAccount = AccountFromValue(params[0]);
     CBitcoinAddress address(params[1].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Sling address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Graviton address");
     int64_t nAmount = AmountFromValue(params[2]);
 
     int nMinDepth = 1;
@@ -670,7 +667,7 @@ Value sendmany(const Array& params, bool fHelp)
     {
         CBitcoinAddress address(s.name_);
         if (!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Sling address: ")+s.name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Graviton address: ")+s.name_);
 
         if (setAddress.count(address))
             throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+s.name_);
@@ -716,7 +713,7 @@ Value addmultisigaddress(const Array& params, bool fHelp)
     {
         string msg = "addmultisigaddress <nrequired> <'[\"key\",\"key\"]'> [account]\n"
             "Add a nrequired-to-sign multisignature address to the wallet\"\n"
-            "each key is a Sling address or hex-encoded public key\n"
+            "each key is a Graviton address or hex-encoded public key\n"
             "If [account] is specified, assign address to [account].";
         throw runtime_error(msg);
     }
@@ -1458,7 +1455,7 @@ Value encryptwallet(const Array& params, bool fHelp)
     // slack space in .dat files; that is bad if the old data is
     // unencrypted private keys. So:
     StartShutdown();
-    return "wallet encrypted; Sling server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.";
+    return "wallet encrypted; Graviton server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.";
 }
 
 
@@ -1602,7 +1599,7 @@ Value getnewstealthaddress(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getnewstealthaddress [label]\n"
-            "Returns a new Sling stealth address for receiving payments anonymously.  ");
+            "Returns a new Graviton stealth address for receiving payments anonymously.  ");
     
     if (pwalletMain->IsLocked())
         throw runtime_error("Failed: Wallet must be unlocked.");
@@ -1807,7 +1804,7 @@ Value sendtostealthaddress(const Array& params, bool fHelp)
     
     if (!sxAddr.SetEncoded(sEncoded))
     {
-        result.push_back(Pair("result", "Invalid Sling stealth address."));
+        result.push_back(Pair("result", "Invalid Graviton stealth address."));
         return result;
     };
     
@@ -1938,152 +1935,4 @@ Value scanforstealthtxns(const Array& params, bool fHelp)
     return result;
 }
 
-Value keepass(const Array& params, bool fHelp) {
-    string strCommand;
 
-    if (params.size() >= 1)
-        strCommand = params[0].get_str();
-
-    if (fHelp  ||
-        (strCommand != "genkey" && strCommand != "init" && strCommand != "setpassphrase"))
-        throw runtime_error(
-            "keepass <genkey|init|setpassphrase>\n");
-
-    if (strCommand == "genkey")
-    {
-        SecureString result;
-        // Generate RSA key
-        //std::string keePassKey = CKeePassIntegrator::generateKey();
-        //return keePassKey;
-        SecureString sKey = CKeePassIntegrator::generateKeePassKey();
-        result = "Generated Key: ";
-        result += sKey;
-        return result.c_str();
-    }
-    else if(strCommand == "init")
-    {
-        // Generate base64 encoded 256 bit RSA key and associate with KeePassHttp
-        SecureString result;
-        SecureString sKey;
-        std::string sId;
-        std::string sErrorMessage;
-        keePassInt.rpcAssociate(sId, sKey);
-        result = "Association successful. Id: ";
-        result += sId.c_str();
-        result += " - Key: ";
-        result += sKey.c_str();
-        return result.c_str();
-    }
-    else if(strCommand == "setpassphrase")
-    {
-        if(params.size() != 2) {
-            return "setlogin: invalid number of parameters. Requires a passphrase";
-        }
-
-        SecureString sPassphrase = SecureString(params[1].get_str().c_str());
-
-        keePassInt.updatePassphrase(sPassphrase);
-
-        return "setlogin: Updated credentials.";
-    }
-
-    return "Invalid command";
-
-}
-
-Value resetrichlist(const Array& params, bool fHelp) {
-    if (fHelp)
-        throw runtime_error(
-            "resetrichlist\n"
-	    "Clears the existing data in the rich list.\n");
-
-    CRichListData richListData;
-    bool fResult = ReadRichList(richListData);
-    if(fResult)
-    {
-	richListData.mapRichList.clear();
-	richListData.nLastHeight = 0;
-        fResult = WriteRichList(richListData);
-    }
-
-    Object result;
-    result.push_back(Pair("result", fResult));
-    return result;
-}
-
-Value updaterichlist(const Array& params, bool fHelp) {
-    if (fHelp)
-        throw runtime_error(
-            "updaterichlist\n"
-	    "Scans the blockchain from the last processed block\n"
-	    "and updates the rich list index.\n"
-	    "NOTE: This can take a long time if starting from\n"
-	    "an empty index or on first run.\n");
-
-    bool fResult = UpdateRichList();
-    Object result;
-    result.push_back(Pair("result", fResult));
-    return result;
-}
-
-
-Value getrichlist(const Array& params, bool fHelp) {
-    if (params.size() > 1 || fHelp)
-        throw runtime_error(
-            "getrichlist <count>\n"
-	    "<count> Optional number of addresses to return (default: 100)\n"
-	    "Returns the rich list, the list of all known addresses\n"
-	    "and their balances sorted in descending order.\n");
-
-    int nMaxCount = 100;
-    if (params.size() >= 1)
-        nMaxCount = params[0].get_int();
-
-    CRichListData richListData;
-    bool fResult = LoadRichList(richListData);
-    Object result;
-    if(!fResult)
-    {
-	result.push_back(Pair("result", "Could not load rich list."));
-    }
-    else
-    {
-	std::set<CRichListDataItem> setRichList;
-	BOOST_FOREACH(const PAIRTYPE(std::string, CRichListDataItem)& p, richListData.mapRichList)
-        {
-	    setRichList.insert(p.second);
-        }
-
-	int n = 0;
-	BOOST_REVERSE_FOREACH(CRichListDataItem p, setRichList)
-	{
-	    n++;
-	    if(n > nMaxCount)
-		break;
-	
-	    result.push_back(Pair(p.sAddress, ValueFromAmount(p.nBalance)));
-	}
-    }
-    return result;
-}
-
-Value getrichliststats(const Array& params, bool fHelp) {
-    if (fHelp)
-        throw runtime_error(
-            "getrichliststats\n"
-	    "Returns stats about the rich list\n");
-
-    CRichListData richListData;
-    bool fResult = LoadRichList(richListData);
-    Object result;
-    if(!fResult)
-    {
-	result.push_back(Pair("result", "Could not load rich list."));
-    }
-    else
-    {
-	result.push_back(Pair("count", richListData.mapRichList.size()));
-	result.push_back(Pair("blockheight", richListData.nLastHeight));
-    }
-    return result;
-}

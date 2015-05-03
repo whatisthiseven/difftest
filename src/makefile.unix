@@ -129,6 +129,7 @@ OBJS= \
     obj/rpcsmessage.o \
     obj/timedata.o \
     obj/script.o \
+    obj/scrypt.o \
     obj/sync.o \
     obj/txmempool.o \
     obj/util.o \
@@ -136,18 +137,12 @@ OBJS= \
     obj/noui.o \
     obj/kernel.o \
     obj/pbkdf2.o \
-    obj/scrypt.o \
-    obj/scrypt-arm.o \
-    obj/scrypt-x86.o \
-    obj/scrypt-x86_64.o \
     obj/chainparams.o \
-    obj/irc.o \
     obj/stealth.o \
     obj/activemasternode.o \
     obj/darksend.o \
     obj/eccryptoverify.o \
     obj/instantx.o \
-    obj/keepass.o \
     obj/masternodeconfig.o \
     obj/masternode.o \
     obj/rpcdarksend.o \
@@ -159,10 +154,7 @@ OBJS= \
     obj/crypto/sha1.o \
     obj/crypto/sha256.o \
     obj/crypto/sha512.o \
-    obj/smessage.o \
-    obj/richlistdata.o \
-    obj/richlistdb.o
-    
+    obj/smessage.o    
 
 ifeq (${USE_WALLET}, 1)
     DEFS += -DENABLE_WALLET
@@ -176,7 +168,7 @@ ifeq (${USE_WALLET}, 1)
         obj/walletdb.o
 endif
 
-all: slingd
+all: gravitond
 
 LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a
 DEFS += $(addprefix -I,$(CURDIR)/leveldb/include)
@@ -210,11 +202,11 @@ obj/%.o: %.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-slingd: $(OBJS:obj/%=obj/%)
+gravitond: $(OBJS:obj/%=obj/%)
 	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)
 
 clean:
-	-rm -f slingd
+	-rm -f gravitond
 	-rm -f obj/*.o
 	-rm -f obj/*.P
 	-rm -f obj/build.h

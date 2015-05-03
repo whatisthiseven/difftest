@@ -7,23 +7,23 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Sling-Qt</string>
+	<string>Graviton-Qt</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>Sling-Qt</string>
+	<string>Graviton-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>co.sling.Sling-Qt</string>
+	<string>co.graviton.Graviton-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>co.sling.SlingPayment</string>
+            <string>co.graviton.GravitonPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>sling</string>
+              <string>graviton</string>
             </array>
           </dict>
         </array>

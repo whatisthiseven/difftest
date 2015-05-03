@@ -105,7 +105,7 @@ ifeq (${USE_WALLET}, 1)
         obj/walletdb.o
 endif
 
-all: slingd.exe
+all: gravitond.exe
 
 LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a
 DEFS += -I"$(CURDIR)/leveldb/include"
@@ -123,9 +123,9 @@ DEFS += -DHAVE_BUILD_INFO
 obj/%.o: %.cpp $(HEADERS)
 	$(CXX) -c $(CFLAGS) -o $@ $<
 
-slingd.exe: $(OBJS:obj/%=obj/%)
+gravitond.exe: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS) -lshlwapi
-	$(STRIP) slingd.exe
+	$(STRIP) gravitond.exe
 
 obj/scrypt-x86.o: scrypt-x86.S
 	$(CXX) -c $(CFLAGS) -MMD -o $@ $<
@@ -135,7 +135,7 @@ obj/scrypt-x86_64.o: scrypt-x86_64.S
 
 clean:
 	-rm -f obj/*.o
-	-rm -f slingd.exe
+	-rm -f gravitond.exe
 	-rm -f obj/build.h
 	cd leveldb && TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) clean && cd ..
 

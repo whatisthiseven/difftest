@@ -17,7 +17,6 @@ class SignVerifyMessageDialog;
 class Notificator;
 class RPCConsole;
 class MasternodeManager;
-class RichListPage;
 class MessagePage;
 class MessageModel;
 
@@ -76,10 +75,8 @@ private:
     SendCoinsDialog *sendCoinsPage;
     SignVerifyMessageDialog *signVerifyMessageDialog;
     MasternodeManager *masternodeManagerPage;
-    RichListPage *richListPage;
     MessagePage *messagePage;
 
-    QLabel* netLabel;
     QLabel *labelEncryptionIcon;
     QLabel *labelStakingIcon;
     QLabel *labelConnectionsIcon;
@@ -108,7 +105,6 @@ private:
     QAction *aboutQtAction;
     QAction *openRPCConsoleAction;
     QAction *masternodeManagerAction;
-    QAction *richListPageAction;
     QAction *messageAction;
 
     QSystemTrayIcon *trayIcon;
@@ -182,7 +178,6 @@ private slots:
     /** Show Sign/Verify Message dialog and switch to verify message tab */
     void gotoVerifyMessageTab(QString addr = "");
 
-    void gotoRichListPage();
     void gotoMessagePage();
 
     /** Show configuration dialog */

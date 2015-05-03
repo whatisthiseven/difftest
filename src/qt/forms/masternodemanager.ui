@@ -38,7 +38,7 @@
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
-         <string>SlingShot Network</string>
+         <string>Gravitator Network</string>
         </attribute>
         <layout class="QGridLayout" name="gridLayout">
          <item row="1" column="0">
@@ -95,7 +95,7 @@
            <item>
             <widget class="QLabel" name="label_2">
              <property name="text">
-              <string>SlingShot Node Count:</string>
+              <string>Gravitator Node Count:</string>
              </property>
             </widget>
            </item>
@@ -125,7 +125,7 @@
        </widget>
        <widget class="QWidget" name="tab_2">
         <attribute name="title">
-         <string>My SlingShot Nodes</string>
+         <string>My Gravitator Nodes</string>
         </attribute>
         <layout class="QGridLayout" name="gridLayout_2">
          <item row="0" column="0">

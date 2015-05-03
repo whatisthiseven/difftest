@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Sling</source>
-        <translation>Tietoa Slingista</translation>
+        <source>About Graviton</source>
+        <translation>Tietoa Gravitonista</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Sling&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Sling&lt;/b&gt;-asiakasohjelman versio</translation>
+        <source>&lt;b&gt;Graviton&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Graviton&lt;/b&gt;-asiakasohjelman versio</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Sling developers</source>
+Copyright © 2014 The Graviton developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Sling developers</translation>
+Copyright © 2014 The Graviton developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -66,8 +66,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Sling addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Nämä ovat Sling-osoitteesi rahansiirtojen vastaanottoa varten. Jos haluat, voit antaa jokaiselle lähettäjälle oman osoitteen jotta voit pitää kirjaa sinulle rahaa siirtäneistä henkilöistä.</translation>
+        <source>These are your Graviton addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Nämä ovat Graviton-osoitteesi rahansiirtojen vastaanottoa varten. Jos haluat, voit antaa jokaiselle lähettäjälle oman osoitteen jotta voit pitää kirjaa sinulle rahaa siirtäneistä henkilöistä.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -81,8 +81,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Sling address</source>
-        <translation>Allekirjoita viesti osoittaaksesi Sling-osoitteesi omistajuus</translation>
+        <source>Sign a message to prove you own a Graviton address</source>
+        <translation>Allekirjoita viesti osoittaaksesi Graviton-osoitteesi omistajuus</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -96,8 +96,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Sling address</source>
-        <translation>Vahvista viesti varmistaaksesi että kyseinen Sling-osoitteesi on allekirjoittanut sen</translation>
+        <source>Verify a message to ensure it was signed with a specified Graviton address</source>
+        <translation>Vahvista viesti varmistaaksesi että kyseinen Graviton-osoitteesi on allekirjoittanut sen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -233,7 +233,7 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja hukkaat salasanasi, &lt;b&gt;MENETÄT KAIKKI SLINGISI&lt;/b&gt;!</translation>
+        <translation>Varoitus: Jos salaat lompakkosi ja hukkaat salasanasi, &lt;b&gt;MENETÄT KAIKKI GRAVITONISI&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -264,8 +264,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+82"/>
-        <source>Sling will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Sling-ohjelma sulkee itsensä päättääkseen salauksen luonnin. Muista, että lompakon salaaminen ei täysin turvaa kolikoitasi haittaohjelmien aiheuttamien varkauksien uhalta.</translation>
+        <source>Graviton will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Graviton-ohjelma sulkee itsensä päättääkseen salauksen luonnin. Muista, että lompakon salaaminen ei täysin turvaa kolikoitasi haittaohjelmien aiheuttamien varkauksien uhalta.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -358,8 +358,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Sling</source>
-        <translation>Näytä tietoja Slingista</translation>
+        <source>Show information about Graviton</source>
+        <translation>Näytä tietoja Gravitonista</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -398,12 +398,12 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Sling address</source>
-        <translation>Lähetä varoja Sling-osoitteeseen</translation>
+        <source>Send coins to a Graviton address</source>
+        <translation>Lähetä varoja Graviton-osoitteeseen</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Sling</source>
+        <source>Modify configuration options for Graviton</source>
         <translation>Mukauta asiakasohjelman asetuksia</translation>
     </message>
     <message>
@@ -444,8 +444,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Sling</source>
-        <translation>Sling</translation>
+        <source>Graviton</source>
+        <translation>Graviton</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -454,8 +454,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Sling</source>
-        <translation>&amp;Tietoa Slingista</translation>
+        <source>&amp;About Graviton</source>
+        <translation>&amp;Tietoa Gravitonista</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -506,13 +506,13 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Sling client</source>
-        <translation>Sling-asiakasohjelma</translation>
+        <source>Graviton client</source>
+        <translation>Graviton-asiakasohjelma</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Sling network</source>
-        <translation><numerusform>%n aktiivinen yhteys Sling-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Sling-verkkoon</numerusform></translation>
+        <source>%n active connection(s) to Graviton network</source>
+        <translation><numerusform>%n aktiivinen yhteys Graviton-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Graviton-verkkoon</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -605,8 +605,8 @@ Osoite: %4</translation>
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Sling address or malformed URI parameters.</source>
-        <translation>URI-merkkijonoa ei voida jäsentää! Tämä voi johtua väärästä Sling-osoitteesta tai väärässä muodossa olevista URI-parametreistä.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Graviton address or malformed URI parameters.</source>
+        <translation>URI-merkkijonoa ei voida jäsentää! Tämä voi johtua väärästä Graviton-osoitteesta tai väärässä muodossa olevista URI-parametreistä.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -728,8 +728,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Sling can no longer continue safely and will quit.</source>
-        <translation>Virhe kohdattu. Sling-asiakasohjelma ei voi enää jatkaa turvallisesti ja se suljetaan.</translation>
+        <source>A fatal error occurred. Graviton can no longer continue safely and will quit.</source>
+        <translation>Virhe kohdattu. Graviton-asiakasohjelma ei voi enää jatkaa turvallisesti ja se suljetaan.</translation>
     </message>
 </context>
 <context>
@@ -1062,8 +1062,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Sling address.</source>
-        <translation>Syöttämäsi osoite &quot;%1&quot; ei ole hyväksytty Sling-osoite.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Graviton address.</source>
+        <translation>Syöttämäsi osoite &quot;%1&quot; ei ole hyväksytty Graviton-osoite.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1081,8 +1081,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Sling-Qt</source>
-        <translation>Sling-Qt</translation>
+        <source>Graviton-Qt</source>
+        <translation>Graviton-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1154,13 +1154,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Sling after logging in to the system.</source>
-        <translation>Käynnistä Sling-asiakasohjelma automaattisesti kun olet kirjautunut järjestelmään.</translation>
+        <source>Automatically start Graviton after logging in to the system.</source>
+        <translation>Käynnistä Graviton-asiakasohjelma automaattisesti kun olet kirjautunut järjestelmään.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Sling on system login</source>
-        <translation>%Käynnistä Sling-asiakasohjelma kirjautuessasi</translation>
+        <source>&amp;Start Graviton on system login</source>
+        <translation>%Käynnistä Graviton-asiakasohjelma kirjautuessasi</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1169,8 +1169,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Sling client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa Sling-asiakkaalle automaattisesti portti reitittimestä. Tämä toimii vain, kun reitittimesi tukee UPnP:tä ja se on aktivoituna.</translation>
+        <source>Automatically open the Graviton client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa Graviton-asiakkaalle automaattisesti portti reitittimestä. Tämä toimii vain, kun reitittimesi tukee UPnP:tä ja se on aktivoituna.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1179,8 +1179,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Sling network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Yhdistä Sling-verkkoon SOCKS-välityspalvelimen lävitse. (esim. yhdistettäessä Tor:n kautta).</translation>
+        <source>Connect to the Graviton network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Yhdistä Graviton-verkkoon SOCKS-välityspalvelimen lävitse. (esim. yhdistettäessä Tor:n kautta).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1254,8 +1254,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Sling.</source>
-        <translation>Käyttöliittymän kieli voidaan valita tästä. Tämä asetus tulee voimaan vasta Sling-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Graviton.</source>
+        <translation>Käyttöliittymän kieli voidaan valita tästä. Tämä asetus tulee voimaan vasta Graviton-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1321,8 +1321,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Sling.</source>
-        <translation>Tämä asetus tulee voimaan vasta Sling-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
+        <source>This setting will take effect after restarting Graviton.</source>
+        <translation>Tämä asetus tulee voimaan vasta Graviton-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1340,8 +1340,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Sling network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytettävät tiedot voivat olla vanhentuneet. Lompakkosi synkronoituu automaattisesti Sling-verkon kanssa kun yhteys on muodostettu, mutta tätä prosessia ei ole viety vielä päätökseen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Graviton network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytettävät tiedot voivat olla vanhentuneet. Lompakkosi synkronoituu automaattisesti Graviton-verkon kanssa kun yhteys on muodostettu, mutta tätä prosessia ei ole viety vielä päätökseen.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1414,7 +1414,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start sling: click-to-pay handler</source>
+        <source>Cannot start graviton: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1582,8 +1582,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Sling-Qt help message to get a list with possible Sling command-line options.</source>
-        <translation>Näytä Sling-Qt:n avustusohje saadaksesi listan käytettävistä Slingin komentokehotteen määritteistä.</translation>
+        <source>Show the Graviton-Qt help message to get a list with possible Graviton command-line options.</source>
+        <translation>Näytä Graviton-Qt:n avustusohje saadaksesi listan käytettävistä Gravitonin komentokehotteen määritteistä.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1602,13 +1602,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Sling - Debug window</source>
-        <translation>Sling - Debug-ikkuna</translation>
+        <source>Graviton - Debug window</source>
+        <translation>Graviton - Debug-ikkuna</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Sling Core</source>
-        <translation>Slingin ydin</translation>
+        <source>Graviton Core</source>
+        <translation>Gravitonin ydin</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1617,8 +1617,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Sling debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Avaa Sling-asiakasohjelman debug-lokitiedosto nykyisestä hakemistostaan. Tämä voi kestää muutaman sekunnin avattaessa suuria lokitiedostoja.</translation>
+        <source>Open the Graviton debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Avaa Graviton-asiakasohjelman debug-lokitiedosto nykyisestä hakemistostaan. Tämä voi kestää muutaman sekunnin avattaessa suuria lokitiedostoja.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1627,8 +1627,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Sling RPC console.</source>
-        <translation>Tervetuloa Slingin RPC-konsoliin.</translation>
+        <source>Welcome to the Graviton RPC console.</source>
+        <translation>Tervetuloa Gravitonin RPC-konsoliin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1688,7 +1688,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Lähetä Slingeja</translation>
+        <translation>Lähetä Gravitoneja</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -1821,8 +1821,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Sling address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Syötä Sling-osoite (esim. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Syötä Graviton-osoite (esim. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1921,8 +1921,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Sling address</source>
-        <translation>VAROITUS: Epäkelpo Sling-osoite</translation>
+        <source>WARNING: Invalid Graviton address</source>
+        <translation>VAROITUS: Epäkelpo Graviton-osoite</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1995,8 +1995,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Sling address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Syötä Sling-osoite (esim. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Syötä Graviton-osoite (esim. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -2056,8 +2056,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Sling address</source>
-        <translation>Allekirjoita viesti vahvistaaksesi, että omistat tämän Sling-osoitteen</translation>
+        <source>Sign the message to prove you own this Graviton address</source>
+        <translation>Allekirjoita viesti vahvistaaksesi, että omistat tämän Graviton-osoitteen</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2088,8 +2088,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Sling address</source>
-        <translation>Vahvista viesti varmistaaksesi että se on allekirjoitettu kyseisellä Sling-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified Graviton address</source>
+        <translation>Vahvista viesti varmistaaksesi että se on allekirjoitettu kyseisellä Graviton-osoitteella</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2099,8 +2099,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Sling address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Syötä Sling-osoite (esim. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Syötä Graviton-osoite (esim. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2109,8 +2109,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Sling signature</source>
-        <translation>Syötä Sling-allekirjoitus</translation>
+        <source>Enter Graviton signature</source>
+        <translation>Syötä Graviton-allekirjoitus</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2688,8 +2688,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Sling version</source>
-        <translation>Slingin versio</translation>
+        <source>Graviton version</source>
+        <translation>Gravitonin versio</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2698,8 +2698,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or slingd</source>
-        <translation>Syötä komento kohteeseen -server tai slingd</translation>
+        <source>Send command to -server or gravitond</source>
+        <translation>Syötä komento kohteeseen -server tai gravitond</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2718,13 +2718,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: sling.conf)</source>
-        <translation>Määritä asetustiedosto (oletus: sling.conf)</translation>
+        <source>Specify configuration file (default: graviton.conf)</source>
+        <translation>Määritä asetustiedosto (oletus: graviton.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: slingd.pid)</source>
-        <translation>Määritä prosessitiedosto (oletus: sling.pid)</translation>
+        <source>Specify pid file (default: gravitond.pid)</source>
+        <translation>Määritä prosessitiedosto (oletus: graviton.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2741,13 +2741,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=slingrpc
+rpcuser=gravitonrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Graviton Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2853,8 +2853,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Sling will not work properly.</source>
-        <translation>Varoitus: Tarkista, että tietokoneesi aika ja päivämäärä ovat oikeassa! Jos kellosi on väärässä, Sling ei toimi oikein.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Graviton will not work properly.</source>
+        <translation>Varoitus: Tarkista, että tietokoneesi aika ja päivämäärä ovat oikeassa! Jos kellosi on väärässä, Graviton ei toimi oikein.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -3160,8 +3160,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Sling is shutting down.</source>
-        <translation>Käyttöönottotarkistus epäonnistui. Sling-asiakasohjelma suljetaan.</translation>
+        <source>Initialization sanity check failed. Graviton is shutting down.</source>
+        <translation>Käyttöönottotarkistus epäonnistui. Graviton-asiakasohjelma suljetaan.</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -3225,13 +3225,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Sling</source>
-        <translation>Virhe ladattaessa wallet.dat-tiedostoa: Lompakko tarvitsee uudemman version Sling-asiakasohjelmasta</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Graviton</source>
+        <translation>Virhe ladattaessa wallet.dat-tiedostoa: Lompakko tarvitsee uudemman version Graviton-asiakasohjelmasta</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Sling to complete</source>
-        <translation>Lompakko on kirjoitettava uudelleen: käynnistä Sling-asiakasohjelma uudelleen päättääksesi toiminnon</translation>
+        <source>Wallet needed to be rewritten: restart Graviton to complete</source>
+        <translation>Lompakko on kirjoitettava uudelleen: käynnistä Graviton-asiakasohjelma uudelleen päättääksesi toiminnon</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3295,8 +3295,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Sling is probably already running.</source>
-        <translation>Ei voitu liittää %s tällä tietokoneella. Sling-asiakasohjelma on jo ehkä päällä.</translation>
+        <source>Unable to bind to %s on this computer. Graviton is probably already running.</source>
+        <translation>Ei voitu liittää %s tällä tietokoneella. Graviton-asiakasohjelma on jo ehkä päällä.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3335,7 +3335,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Sling Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Sling is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Graviton is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

@@ -8,7 +8,7 @@
 #include "clientversion.h"
 
 //
-// Bootup the masternode, look for a 500 SLING input and register on the network
+// Bootup the masternode, look for a 500 GRAVITON input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {
@@ -427,7 +427,7 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
     // Filter
     BOOST_FOREACH(const COutput& out, vCoins)
     {
-        if(out.tx->vout[out.i].nValue == 7331*COIN) { //exactly
+        if(out.tx->vout[out.i].nValue == 25000*COIN) { //exactly
         	filteredCoins.push_back(out);
         }
     }
@@ -449,38 +449,12 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternodeForPubKey(std::string co
     // Filter
     BOOST_FOREACH(const COutput& out, vCoins)
     {
-        if(out.tx->vout[out.i].scriptPubKey == scriptPubKey && out.tx->vout[out.i].nValue == 7331*COIN) { //exactly
+        if(out.tx->vout[out.i].scriptPubKey == scriptPubKey && out.tx->vout[out.i].nValue == 25000*COIN) { //exactly
         	filteredCoins.push_back(out);
         }
     }
     return filteredCoins;
 }
-
-
-/* select coins with specified transaction hash and output index */
-/*
-bool CActiveMasternode::SelectCoinsMasternode(CTxIn& vin, int64& nValueIn, CScript& pubScript, std::string strTxHash, std::string strOutputIndex)
-{
-	CWalletTx ctx;
-
-	// Convert configuration strings
-	uint256 txHash;
-	int outputIndex;
-	txHash.SetHex(strTxHash);
-	std::istringstream(strOutputIndex) >> outputIndex;
-
-	if(pwalletMain->GetTransaction(txHash, ctx)) {
-		if(ctx.vout[outputIndex].nValue == 1000*COIN) { //exactly
-			vin = CTxIn(ctx.GetHash(), outputIndex);
-			pubScript = ctx.vout[outputIndex].scriptPubKey; // the inputs PubKey
-			nValueIn = ctx.vout[outputIndex].nValue;
-		return true;
-		}
-	}
-
-    return false;
-}
-*/
 
 // when starting a masternode, this can enable to run as a hot wallet with no funds
 bool CActiveMasternode::EnableHotColdMasterNode(CTxIn& newVin, CService& newService)
