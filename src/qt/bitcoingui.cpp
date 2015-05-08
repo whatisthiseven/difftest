@@ -282,8 +282,8 @@ void BitcoinGUI::createActions()
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
 
-    masternodeManagerAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Gravitators"), this);
-    masternodeManagerAction->setToolTip(tr("Show Gravitator Nodes status and configure your nodes."));
+    masternodeManagerAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Herds"), this);
+    masternodeManagerAction->setToolTip(tr("Show Graviton Nodes status and configure your nodes."));
     masternodeManagerAction->setCheckable(true);
     tabGroup->addAction(masternodeManagerAction);
 
@@ -404,7 +404,7 @@ void BitcoinGUI::createToolBars()
     QLabel* header = new QLabel();
     header->setMinimumSize(128, 128);
     header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    header->setPixmap(QPixmap(":/icons/bitcoin"));
+    header->setPixmap(QPixmap(":/images/header"));
     header->setMaximumSize(180,180);
     header->setScaledContents(true);
     toolbar->addWidget(header);
