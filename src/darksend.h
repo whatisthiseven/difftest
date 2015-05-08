@@ -292,7 +292,7 @@ public:
 
     void InitCollateralAddress(){
         std::string strAddress = "";
-            strAddress = "GfCJiZQu54scKeS7L5i4GnQPvBhkqHrrJh";
+            strAddress = "GXotojHDSF5RnJNKwYKURDDZwt5G3xDTEN";
         SetCollateralAddress(strAddress);
     }
 
@@ -418,7 +418,7 @@ public:
     // get the denominations for a list of outputs (returns a bitshifted integer)
     int GetDenominations(const std::vector<CTxOut>& vout);
     void GetDenominationsToString(int nDenom, std::string& strDenom);
-    // get the denominations for a specific amount of graviton.
+    // get the denominations for a specific amount of goat.
     int GetDenominationsByAmount(int64_t nAmount, int nDenomTarget=0);
 
     int GetDenominationsByAmounts(std::vector<int64_t>& vecAmount);

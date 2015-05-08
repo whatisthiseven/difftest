@@ -67,7 +67,7 @@ struct MessageTableEntry
     }
 };
 
-/** Interface to Graviton Secure Messaging from Qt view code. */
+/** Interface to Goat Secure Messaging from Qt view code. */
 class MessageModel : public QAbstractTableModel
 {
     Q_OBJECT

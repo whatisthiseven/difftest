@@ -51,11 +51,11 @@ void OptionsModel::Init()
     if (!settings.contains("nDarksendRounds"))
         settings.setValue("nDarksendRounds", 2);
 
-    if (!settings.contains("nAnonymizeGravitonAmount"))
-        settings.setValue("nAnonymizeGravitonAmount", 1000);
+    if (!settings.contains("nAnonymizeGoatAmount"))
+        settings.setValue("nAnonymizeGoatAmount", 1000);
 
     nDarksendRounds = settings.value("nDarksendRounds").toLongLong();
-    nAnonymizeGravitonAmount = settings.value("nAnonymizeGravitonAmount").toLongLong();
+    nAnonymizeGoatAmount = settings.value("nAnonymizeGoatAmount").toLongLong();
 
     // These are shared with core Bitcoin; we want
     // command-line options to override the GUI settings:
@@ -70,8 +70,8 @@ void OptionsModel::Init()
 
     if (settings.contains("nDarksendRounds"))
         SoftSetArg("-darksendrounds", settings.value("nDarksendRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeGravitonAmount"))
-        SoftSetArg("-anonymizegravitonamount", settings.value("nAnonymizeGravitonAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeGoatAmount"))
+        SoftSetArg("-anonymizegoatamount", settings.value("nAnonymizeGoatAmount").toString().toStdString());
 }
 
 int OptionsModel::rowCount(const QModelIndex & parent) const
@@ -216,10 +216,10 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
             settings.setValue("nDarksendRounds", nDarksendRounds);
             emit darksendRoundsChanged(nDarksendRounds);
             break;
-        case anonymizeGravitonAmount:
-            nAnonymizeGravitonAmount = value.toInt();
-            settings.setValue("nAnonymizeGravitonAmount", nAnonymizeGravitonAmount);
-            emit anonymizeGravitonAmountChanged(nAnonymizeGravitonAmount);
+        case anonymizeGoatAmount:
+            nAnonymizeGoatAmount = value.toInt();
+            settings.setValue("nAnonymizeGoatAmount", nAnonymizeGoatAmount);
+            emit anonymizeGoatAmountChanged(nAnonymizeGoatAmount);
             break;
         default:
             break;

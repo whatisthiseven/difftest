@@ -34,7 +34,7 @@ public:
         MinimizeCoinAge,   // bool
         UseBlackTheme,     // bool
         DarksendRounds,    // int
-        anonymizeGravitonAmount, //int
+        anonymizeGoatAmount, //int
         OptionIDRowCount,
     };
 
@@ -66,7 +66,7 @@ signals:
     void reserveBalanceChanged(qint64);
     void coinControlFeaturesChanged(bool);
     void darksendRoundsChanged(int);
-    void anonymizeGravitonAmountChanged(int);
+    void anonymizeGoatAmountChanged(int);
 };
 
 #endif // OPTIONSMODEL_H

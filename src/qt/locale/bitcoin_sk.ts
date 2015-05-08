@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Graviton</source>
-        <translation>O Gravitone</translation>
+        <source>About Goat</source>
+        <translation>O Goate</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Graviton&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Graviton&lt;/b&gt; verzia</translation>
+        <source>&lt;b&gt;Goat&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Goat&lt;/b&gt; verzia</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Graviton developers</source>
+Copyright © 2014 The Goat developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Graviton developers</translation>
+Copyright © 2014 The Goat developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -65,8 +65,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Graviton addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Toto sú vaše Graviton adresy pre príjem platieb. Možno budete chcieť dať inú každému odosielateľovi, aby ste mohli sledovať, kto Vám platí.</translation>
+        <source>These are your Goat addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Toto sú vaše Goat adresy pre príjem platieb. Možno budete chcieť dať inú každému odosielateľovi, aby ste mohli sledovať, kto Vám platí.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -80,8 +80,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Graviton address</source>
-        <translation>Podpísať správu ako dôkaz, že vlastníte túto Graviton adresu</translation>
+        <source>Sign a message to prove you own a Goat address</source>
+        <translation>Podpísať správu ako dôkaz, že vlastníte túto Goat adresu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -95,8 +95,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Graviton address</source>
-        <translation>Overte správu, aby ste zabezpečili, že bola podpísaná s určitou Graviton adresou</translation>
+        <source>Verify a message to ensure it was signed with a specified Goat address</source>
+        <translation>Overte správu, aby ste zabezpečili, že bola podpísaná s určitou Goat adresou</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -263,8 +263,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+82"/>
-        <source>Graviton will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Graviton sa teraz zavrie aby dokončil proces zašifrovania. Nezabudnite, že zašifrovanie vašej peňaženky nemôže plne chrániť vaše mince pred krádežou malwarom, ktorý napadol váš počítač.</translation>
+        <source>Goat will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Goat sa teraz zavrie aby dokončil proces zašifrovania. Nezabudnite, že zašifrovanie vašej peňaženky nemôže plne chrániť vaše mince pred krádežou malwarom, ktorý napadol váš počítač.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -357,8 +357,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Graviton</source>
-        <translation>Zobraziť informácie o Graviton</translation>
+        <source>Show information about Goat</source>
+        <translation>Zobraziť informácie o Goat</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -397,13 +397,13 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Graviton address</source>
-        <translation>Poslať mince na Graviton adresu</translation>
+        <source>Send coins to a Goat address</source>
+        <translation>Poslať mince na Goat adresu</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Graviton</source>
-        <translation>Upraviť možnosti konfigurácie pre Graviton</translation>
+        <source>Modify configuration options for Goat</source>
+        <translation>Upraviť možnosti konfigurácie pre Goat</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -443,8 +443,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Graviton</source>
-        <translation>Graviton</translation>
+        <source>Goat</source>
+        <translation>Goat</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -453,8 +453,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Graviton</source>
-        <translation>&amp;O Graviton</translation>
+        <source>&amp;About Goat</source>
+        <translation>&amp;O Goat</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -505,13 +505,13 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Graviton client</source>
-        <translation>Graviton klient</translation>
+        <source>Goat client</source>
+        <translation>Goat klient</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Graviton network</source>
-        <translation><numerusform>%n aktívne spojenie s Graviton sieťov</numerusform><numerusform>%n aktívnych spojení s Graviton sieťov</numerusform><numerusform>%n aktívnych spojení s Graviton sieťou</numerusform></translation>
+        <source>%n active connection(s) to Goat network</source>
+        <translation><numerusform>%n aktívne spojenie s Goat sieťov</numerusform><numerusform>%n aktívnych spojení s Goat sieťov</numerusform><numerusform>%n aktívnych spojení s Goat sieťou</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -604,8 +604,8 @@ Adresa: %4</translation>
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Graviton address or malformed URI parameters.</source>
-        <translation>URI nemožno analyzovať! Toto môže byť spôsobené neplatnou Graviton adresu alebo chybnými URI parametrami.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Goat address or malformed URI parameters.</source>
+        <translation>URI nemožno analyzovať! Toto môže byť spôsobené neplatnou Goat adresu alebo chybnými URI parametrami.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -727,8 +727,8 @@ Adresa: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Graviton can no longer continue safely and will quit.</source>
-        <translation>Došlo k závažnej chybe. Graviton už nemôže pokračovať bezpečne a bude ukončený.</translation>
+        <source>A fatal error occurred. Goat can no longer continue safely and will quit.</source>
+        <translation>Došlo k závažnej chybe. Goat už nemôže pokračovať bezpečne a bude ukončený.</translation>
     </message>
 </context>
 <context>
@@ -1061,8 +1061,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Graviton address.</source>
-        <translation>Zadaná adresa &quot;%1&quot; nie je platnou Graviton adresou.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Goat address.</source>
+        <translation>Zadaná adresa &quot;%1&quot; nie je platnou Goat adresou.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1080,8 +1080,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Graviton-Qt</source>
-        <translation>Graviton-Qt</translation>
+        <source>Goat-Qt</source>
+        <translation>Goat-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1153,13 +1153,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Graviton after logging in to the system.</source>
-        <translation>Automaticky spustiť Graviton po prihlásení sa do systému.</translation>
+        <source>Automatically start Goat after logging in to the system.</source>
+        <translation>Automaticky spustiť Goat po prihlásení sa do systému.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Graviton on system login</source>
-        <translation>&amp;Spustiť Graviton pri prihlásení do systému</translation>
+        <source>&amp;Start Goat on system login</source>
+        <translation>&amp;Spustiť Goat pri prihlásení do systému</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1168,8 +1168,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Graviton client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automaticky otvoriť port klienta Graviton na routeri. To funguje iba vtedy, ak váš router podporuje UPnP a je povolené.</translation>
+        <source>Automatically open the Goat client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automaticky otvoriť port klienta Goat na routeri. To funguje iba vtedy, ak váš router podporuje UPnP a je povolené.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1178,8 +1178,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Graviton network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Pripojenie k sieti Graviton cez SOCKS proxy server (napr. pri pripojení cez Tor).</translation>
+        <source>Connect to the Goat network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Pripojenie k sieti Goat cez SOCKS proxy server (napr. pri pripojení cez Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1253,8 +1253,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Graviton.</source>
-        <translation>Tu môžete nastaviť jazyk používateľského rozhrania. Toto nastavenie sa prejaví až po reštartovaní Graviton.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Goat.</source>
+        <translation>Tu môžete nastaviť jazyk používateľského rozhrania. Toto nastavenie sa prejaví až po reštartovaní Goat.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1320,8 +1320,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Graviton.</source>
-        <translation>Toto nastavenie sa prejaví až po reštartovaní Graviton.</translation>
+        <source>This setting will take effect after restarting Goat.</source>
+        <translation>Toto nastavenie sa prejaví až po reštartovaní Goat.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1339,8 +1339,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Graviton network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informácie môžu byť zastaralé. Vaša peňaženka sa automaticky synchronizuje so sieťou Graviton po nadviazaní spojenia, ale tento proces nie je ešte dokončený.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Goat network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informácie môžu byť zastaralé. Vaša peňaženka sa automaticky synchronizuje so sieťou Goat po nadviazaní spojenia, ale tento proces nie je ešte dokončený.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1413,8 +1413,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start graviton: click-to-pay handler</source>
-        <translation>Graviton sa nedá spustiť: click-to-pay handler</translation>
+        <source>Cannot start goat: click-to-pay handler</source>
+        <translation>Goat sa nedá spustiť: click-to-pay handler</translation>
     </message>
 </context>
 <context>
@@ -1581,8 +1581,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Graviton-Qt help message to get a list with possible Graviton command-line options.</source>
-        <translation>Zobraziť Graviton-Qt nápovedu k získaniu zoznamu pre možnosti  príkazového riadku Graviton.</translation>
+        <source>Show the Goat-Qt help message to get a list with possible Goat command-line options.</source>
+        <translation>Zobraziť Goat-Qt nápovedu k získaniu zoznamu pre možnosti  príkazového riadku Goat.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1601,13 +1601,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Graviton - Debug window</source>
-        <translation>Graviton - Ladiace okno</translation>
+        <source>Goat - Debug window</source>
+        <translation>Goat - Ladiace okno</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Graviton Core</source>
-        <translation>Jadro Graviton</translation>
+        <source>Goat Core</source>
+        <translation>Jadro Goat</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1616,8 +1616,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Graviton debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otvorte Graviton súbor denníku ladenia z aktuálneho adresára dát. To môže trvať niekoľko sekúnd pre veľké súbory denníka.</translation>
+        <source>Open the Goat debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Otvorte Goat súbor denníku ladenia z aktuálneho adresára dát. To môže trvať niekoľko sekúnd pre veľké súbory denníka.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1626,8 +1626,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Graviton RPC console.</source>
-        <translation>Vitajte v konzole Graviton RPC.</translation>
+        <source>Welcome to the Goat RPC console.</source>
+        <translation>Vitajte v konzole Goat RPC.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1735,8 +1735,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 BC</source>
-        <translation>123.456 BC {0.00 ?}</translation>
+        <source>0.00 GOAT</source>
+        <translation>123.456 GOAT {0.00 ?}</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1805,8 +1805,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 BC</source>
-        <translation>123.456 BC</translation>
+        <source>123.456 GOAT</source>
+        <translation>123.456 GOAT</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1820,8 +1820,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Zadajte Graviton adresu (napr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Goat address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Zadajte Goat adresu (napr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1920,8 +1920,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Graviton address</source>
-        <translation>UPOZORNENIE: Neplatná Graviton adresa</translation>
+        <source>WARNING: Invalid Goat address</source>
+        <translation>UPOZORNENIE: Neplatná Goat adresa</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1994,8 +1994,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Zadajte Graviton adresu (napr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Goat address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Zadajte Goat adresu (napr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -2055,8 +2055,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Graviton address</source>
-        <translation>Podpísať správu ako dôkaz, že vlastníte túto Graviton adresu</translation>
+        <source>Sign the message to prove you own this Goat address</source>
+        <translation>Podpísať správu ako dôkaz, že vlastníte túto Goat adresu</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2087,8 +2087,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Graviton address</source>
-        <translation>Overte správu, aby ste sa ubezpečili, že bola podpísaná s danou Graviton adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Goat address</source>
+        <translation>Overte správu, aby ste sa ubezpečili, že bola podpísaná s danou Goat adresou</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2098,8 +2098,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Zadajte Graviton adresu (napr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Goat address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Zadajte Goat adresu (napr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2108,8 +2108,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Graviton signature</source>
-        <translation>Zadajte Graviton podpis</translation>
+        <source>Enter Goat signature</source>
+        <translation>Zadajte Goat podpis</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2687,8 +2687,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Graviton version</source>
-        <translation>Graviton verzia</translation>
+        <source>Goat version</source>
+        <translation>Goat verzia</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2697,8 +2697,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or gravitond</source>
-        <translation>Pošli príkaz na -server alebo gravitond</translation>
+        <source>Send command to -server or goatd</source>
+        <translation>Pošli príkaz na -server alebo goatd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2717,13 +2717,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: graviton.conf)</source>
-        <translation>Zadajte konfiguračný súbor (predvolené: graviton.conf)</translation>
+        <source>Specify configuration file (default: goat.conf)</source>
+        <translation>Zadajte konfiguračný súbor (predvolené: goat.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: gravitond.pid)</source>
-        <translation>Zadajte pid súbor (predvolené: gravitond.pid)</translation>
+        <source>Specify pid file (default: goatd.pid)</source>
+        <translation>Zadajte pid súbor (predvolené: goatd.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2740,24 +2740,24 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=gravitonrpc
+rpcuser=goatrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Graviton Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Goat Alert&quot; admin@foo.com
 </source>
         <translation>%s, musíte nastaviť rpcpassword v konfiguračnom súbore:
 %s
 Doporučuje sa použiť nasledovné náhodne heslo:
-rpcuser=gravitonrpc
+rpcuser=goatrpc
 rpcpassword=%s
 (toto heslo si nemusíte pamätať)
 Užívateľské meno a heslo NESMIE byť rovnaké.
 Ak súbor neexistuje, vytvorte ho s právami &quot;môže čítať iba vlastník&quot;.
 Odporúča sa tiež nastaviť &quot;alertnotify&quot;, takže budete upozornení na problémy,
-napríklad: alertnotify=echo %%s | mail -s &quot;Graviton upozornenie&quot; admin@foo.com
+napríklad: alertnotify=echo %%s | mail -s &quot;Goat upozornenie&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2862,8 +2862,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Graviton upozornenie&quot; admi
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Graviton will not work properly.</source>
-        <translation>Upozornenie: Skontrolujte, že dátum a čas počítača sú správne! Ak je Váš čas nesprávny Graviton nebude pracovať správne.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Goat will not work properly.</source>
+        <translation>Upozornenie: Skontrolujte, že dátum a čas počítača sú správne! Ak je Váš čas nesprávny Goat nebude pracovať správne.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -3169,8 +3169,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Graviton upozornenie&quot; admi
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Graviton is shutting down.</source>
-        <translation>Úvodné kontrolné testy zlyhali. Graviton sa teraz zatvori.</translation>
+        <source>Initialization sanity check failed. Goat is shutting down.</source>
+        <translation>Úvodné kontrolné testy zlyhali. Goat sa teraz zatvori.</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -3234,13 +3234,13 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Graviton upozornenie&quot; admi
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Graviton</source>
-        <translation>Chyba pri načítaní wallet.dat: Peňaženka vyžaduje novšiu verziu Graviton</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Goat</source>
+        <translation>Chyba pri načítaní wallet.dat: Peňaženka vyžaduje novšiu verziu Goat</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Graviton to complete</source>
-        <translation>Peňaženka potrebuje byť prepísaná: reštartujte Graviton k dokončeniu</translation>
+        <source>Wallet needed to be rewritten: restart Goat to complete</source>
+        <translation>Peňaženka potrebuje byť prepísaná: reštartujte Goat k dokončeniu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3304,8 +3304,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Graviton upozornenie&quot; admi
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Graviton is probably already running.</source>
-        <translation>Nemôžem sa pripojiť na %s na tomto počítači. Graviton je pravdepodobne už beží.</translation>
+        <source>Unable to bind to %s on this computer. Goat is probably already running.</source>
+        <translation>Nemôžem sa pripojiť na %s na tomto počítači. Goat je pravdepodobne už beží.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3344,8 +3344,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Graviton upozornenie&quot; admi
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Graviton is probably already running.</source>
-        <translation>Nedá sa zamknúť dátová zložka %s. Graviton je pravdepodobne už spustený</translation>
+        <source>Cannot obtain a lock on data directory %s. Goat is probably already running.</source>
+        <translation>Nedá sa zamknúť dátová zložka %s. Goat je pravdepodobne už spustený</translation>
     </message>
     <message>
         <location line="+4"/>

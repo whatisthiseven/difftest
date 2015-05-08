@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef GRAVITON_CRYPTO_COMMON_H
-#define GRAVITON_CRYPTO_COMMON_H
+#ifndef GOAT_CRYPTO_COMMON_H
+#define GOAT_CRYPTO_COMMON_H
 
 #include <stdint.h>
 
@@ -113,4 +113,4 @@ void static inline WriteBE64(unsigned char* ptr, uint64_t x)
 #endif
 }
 
-#endif // GRAVITON_CRYPTO_COMMON_H
+#endif // GOAT_CRYPTO_COMMON_H
