@@ -50,12 +50,12 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("Goat version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("Graviton version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  goatd [options]                     " + "\n" +
-                  "  goatd [options] <command> [params]  " + _("Send command to -server or goatd") + "\n" +
-                  "  goatd [options] help                " + _("List commands") + "\n" +
-                  "  goatd [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  gravitond [options]                     " + "\n" +
+                  "  gravitond [options] <command> [params]  " + _("Send command to -server or gravitond") + "\n" +
+                  "  gravitond [options] help                " + _("List commands") + "\n" +
+                  "  gravitond [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -65,7 +65,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "goat:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "graviton:"))
                 fCommandLine = true;
 
         if (fCommandLine)

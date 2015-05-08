@@ -43,8 +43,8 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 CBigNum bnProofOfStakeLimitV2(~uint256(0) >> 20);
 
-unsigned int nStakeMinAge = 4 * 60 * 60; // 5 hours
-unsigned int nModifierInterval = 4 * 60; // time to elapse before new modifier is computed
+unsigned int nStakeMinAge = 5 * 60 * 60; // 5 hours
+unsigned int nModifierInterval = 5 * 60; // time to elapse before new modifier is computed
 
 int nCoinbaseMaturity = 45;
 CBlockIndex* pindexGenesisBlock = NULL;
@@ -77,7 +77,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Goat Signed Message:\n";
+const string strMessageMagic = "Graviton Signed Message:\n";
 
 extern enum Checkpoints::CPMode CheckpointsMode;
 
@@ -1129,45 +1129,68 @@ static CBigNum GetProofOfStakeLimit(int nHeight)
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 {
-    int64_t nSubsidy = 1 * COIN;
+    int64_t nSubsidy = 750 * COIN;
 
-    if(nHeight <= 500)
+    if(nHeight < 950)
     {
-        nSubsidy = 1000 * COIN;
+        nSubsidy = 750 * COIN;
     }
-    else if(nHeight <= 1000)
+    else if(nHeight < 1400)
     {
-        nSubsidy = 500 * COIN;
+        nSubsidy = 550 * COIN;
     }
-    else if(nHeight <= 1500)
+    else if(nHeight < 1900)
     {
-        nSubsidy = 400 * COIN;
+        nSubsidy = 425 * COIN;
     }
-    else if(nHeight <= 2200)
+    else if(nHeight < 2400)
     {
-        nSubsidy =  300 * COIN;
+        nSubsidy =  325 * COIN;
     }
-    else if(nHeight <=2400)
+    else if(nHeight < 2850)
     {
-        nSubsidy = 1000 * COIN;
+        nSubsidy = 251 * COIN;
+    }
+    else if(nHeight < 3500)
+    {
+        nSubsidy = 190 * COIN;
+    }
+    else if(nHeight < 4000)
+    {
+        nSubsidy = 105 * COIN;
     }
 
     return nSubsidy + nFees;
-
 }
 
 // miner's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees)
 {
-    int64_t nSubsidy = 50 * COIN;
+    int64_t nSubsidy = 40 * COIN;
 
-    if(nHeight <= 2400)
+    if(nHeight < 5000)
     {
-        nSubsidy = 100 * COIN;
+        nSubsidy = 30 * COIN;
     }
-    else if(nHeight <= 4000)
+    else if(nHeight < 7000)
     {
-        nSubsidy = 1000 * COIN;
+        nSubsidy = 45 * COIN;
+    }
+    else if(nHeight < 7250)
+    {
+        nSubsidy = 190 * COIN;
+    }
+    else if(nHeight < 8500)
+    {
+        nSubsidy = 80 * COIN;
+    }
+    else if(nHeight < 10000)
+    {
+        nSubsidy = 15 * COIN;
+    }
+    else if(nHeight < 13500)
+    {
+        nSubsidy = 30 * COIN;
     }
 
     return nSubsidy + nFees;
@@ -3081,7 +3104,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("goat-loadblk");
+    RenameThread("graviton-loadblk");
 
     CImportingNow imp;
 

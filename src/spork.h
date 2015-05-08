@@ -1,4 +1,4 @@
-// Copyright (c) 2015 The GOAT developers
+// Copyright (c) 2015 The GRAVITON developers
 // Copyright (c) 2009-2012 The Darkcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -26,7 +26,7 @@ using namespace boost;
 
 
 #define SPORK_1_MASTERNODE_PAYMENTS_ENFORCEMENT_DEFAULT       2428537599  //2015-4-8 23:59:59 GMT
-#define SPORK_2_MAX_VALUE_DEFAULT                             500        //500 GOAT 
+#define SPORK_2_MAX_VALUE_DEFAULT                             500        //500 GRAVITON 
 #define SPORK_3_REPLAY_BLOCKS_DEFAULT                         0
 #define SPORK_4_RECONVERGE_DEFAULT                            1420070400  //2047-1-1
 
@@ -96,8 +96,8 @@ private:
 public:
 
     CSporkManager() {
-        strMainPubKey = "03931dedcb98a6e0147cdbfed9e06b7b8d4805a858222c7999e82d7490bb08ca02";
-        strTestPubKey = "03931dedcb98a6e0147cdbfed9e06b7b8d4805a858222c7999e82d7490bb08ca02";
+        strMainPubKey = "04a983220ea7a38a7106385003fef77896538a382a0dcc389cc45f3c98751d9af423a097789757556259351198a8aaa628a1fd644c3232678c5845384c744ff8d7";
+        strTestPubKey = "04a983220ea7a38a7106385003fef77896538a382a0dcc389cc45f3c98751d9af423a097789757556259351198a8aaa628a1fd644c3232678c5845384c744ff8d7";
     }
 
     std::string GetSporkNameByID(int id);

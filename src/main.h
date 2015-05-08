@@ -11,7 +11,6 @@
 #include "txmempool.h"
 #include "net.h"
 #include "script.h"
-#include "scrypt.h"
 
 #include <list>
 
@@ -703,7 +702,7 @@ public:
 
     uint256 GetPoWHash() const
     {
-     return scrypt_blockhash(CVOIDBEGIN(nVersion));
+	return Hash(BEGIN(nVersion), END(nNonce));
     }
 
     int64_t GetBlockTime() const

@@ -57,7 +57,7 @@ int CountMasternodesAboveProtocol(int protocolVersion);
 void ProcessMessageMasternode(CNode* pfrom, std::string& strCommand, CDataStream& vRecv);
 
 //
-// The Masternode Class. For managing the darksend process. It contains the input of the 1000GOAT, signature to prove
+// The Masternode Class. For managing the darksend process. It contains the input of the 1000GRAVITON, signature to prove
 // it's the one who own that ip address and code for calculating the payment election.
 //
 class CMasterNode
@@ -215,8 +215,8 @@ private:
 public:
 
     CMasternodePayments() {
-        strMainPubKey = "03931dedcb98a6e0147cdbfed9e06b7b8d4805a858222c7999e82d7490bb08ca02";
-        strTestPubKey = "03931dedcb98a6e0147cdbfed9e06b7b8d4805a858222c7999e82d7490bb08ca02";
+        strMainPubKey = "04265602999e3913bc66b390aa3bfc09c84af8e2defd8d1be13cd37a15e141eb5ebbe2513d6ec3a34361f9cd118f548ed34035393cf61c487a24aba6761e9b0867";
+        strTestPubKey = "04265602999e3913bc66b390aa3bfc09c84af8e2defd8d1be13cd37a15e141eb5ebbe2513d6ec3a34361f9cd118f548ed34035393cf61c487a24aba6761e9b0867";
         enabled = false;
     }
 

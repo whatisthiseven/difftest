@@ -1,9 +1,9 @@
-Building Goat
+Building Graviton
 
-See doc/readme-qt.rst for instructions on building Goat QT,
+See doc/readme-qt.rst for instructions on building Graviton QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of Goat.
+implementation of Graviton.
 
-See doc/build-*.txt for instructions on building goatd,
+See doc/build-*.txt for instructions on building gravitond,
 the intended-for-services, no-graphical-interface, reference
-implementation of Goat.
+implementation of Graviton.

@@ -7,23 +7,23 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Goat-Qt</string>
+	<string>Graviton-Qt</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>Goat-Qt</string>
+	<string>Graviton-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>co.goat.Goat-Qt</string>
+	<string>co.graviton.Graviton-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>co.goat.GoatPayment</string>
+            <string>co.graviton.GravitonPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>goat</string>
+              <string>graviton</string>
             </array>
           </dict>
         </array>

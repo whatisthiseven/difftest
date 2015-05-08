@@ -493,7 +493,7 @@ void CWallet::WalletUpdateSpent(const CTransaction &tx, bool fBlock)
                     LogPrintf("WalletUpdateSpent: bad wtx %s\n", wtx.GetHash().ToString());
                 else if (!wtx.IsSpent(txin.prevout.n) && IsMine(wtx.vout[txin.prevout.n]))
                 {
-                    LogPrintf("WalletUpdateSpent found spent coin %s GOAT %s\n", FormatMoney(wtx.GetCredit()), wtx.GetHash().ToString());
+                    LogPrintf("WalletUpdateSpent found spent coin %s BC %s\n", FormatMoney(wtx.GetCredit()), wtx.GetHash().ToString());
                     wtx.MarkSpent(txin.prevout.n);
                     wtx.WriteToDisk();
                     NotifyTransactionChanged(this, txin.prevout.hash, CT_UPDATED);
@@ -873,7 +873,7 @@ void CWalletTx::GetAmounts(list<pair<CTxDestination, int64_t> >& listReceived,
         if (nDebit > 0)
         {
             // Don't report 'change' txouts
-	    // GOATNOTE: CoinControl possible fix related... with HD wallet we need to report change?
+	    // GRAVITONNOTE: CoinControl possible fix related... with HD wallet we need to report change?
             //if (pwallet->IsChange(txout))
             //    continue;
             fIsMine = pwallet->IsMine(txout);
@@ -1072,7 +1072,7 @@ void CWallet::ReacceptWalletTransactions()
                 }
                 if (fUpdated)
                 {
-                    LogPrintf("ReacceptWalletTransactions found spent coin %s GOAT %s\n", FormatMoney(wtx.GetCredit()), wtx.GetHash().ToString());
+                    LogPrintf("ReacceptWalletTransactions found spent coin %s BC %s\n", FormatMoney(wtx.GetCredit()), wtx.GetHash().ToString());
                     wtx.MarkDirty();
                     wtx.WriteToDisk();
                 }
@@ -1412,7 +1412,7 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 continue;
 
             int nDepth = pcoin->GetDepthInMainChain();
-            if (nDepth <= 0) // GOATNOTE: coincontrol fix / ignore 0 confirm 
+            if (nDepth <= 0) // GRAVITONNOTE: coincontrol fix / ignore 0 confirm 
                 continue;
 
            /* for (unsigned int i = 0; i < pcoin->vout.size(); i++)
@@ -1479,7 +1479,7 @@ void CWallet::AvailableCoinsMN(vector<COutput>& vCoins, bool fOnlyConfirmed, con
                 continue;
 
             int nDepth = pcoin->GetDepthInMainChain();
-            if (nDepth <= 0) // GOATNOTE: coincontrol fix / ignore 0 confirm 
+            if (nDepth <= 0) // GRAVITONNOTE: coincontrol fix / ignore 0 confirm 
                 continue;
 
            /* for (unsigned int i = 0; i < pcoin->vout.size(); i++)
@@ -2007,7 +2007,7 @@ bool CWallet::SelectCoins(int64_t nTargetValue, unsigned int nSpendTime, set<pai
     vector<COutput> vCoins;
     AvailableCoins(vCoins, true, coinControl);
 
-    //if we're doing only denominated, we need to round up to the nearest .1GOAT
+    //if we're doing only denominated, we need to round up to the nearest .1GRAVITON
     if(coin_type == ONLY_DENOMINATED){
         // Make outputs by looping through denominations, from large to small
         BOOST_FOREACH(int64_t v, darkSendDenominations)
@@ -2016,7 +2016,7 @@ bool CWallet::SelectCoins(int64_t nTargetValue, unsigned int nSpendTime, set<pai
             BOOST_FOREACH(const COutput& out, vCoins)
             {
                 if(out.tx->vout[out.i].nValue == v                                            //make sure it's the denom we're looking for
-                    && nValueRet + out.tx->vout[out.i].nValue < nTargetValue + (0.1*COIN)+100 //round the amount up to .1GOAT over
+                    && nValueRet + out.tx->vout[out.i].nValue < nTargetValue + (0.1*COIN)+100 //round the amount up to .1GRAVITON over
                     && added <= 100){                                                          //don't add more than 100 of one denom type
                         CTxIn vin = CTxIn(out.tx->GetHash(),out.i);
                         int rounds = GetInputDarksendRounds(vin);
@@ -2143,10 +2143,10 @@ bool CWallet::SelectCoinsByDenominations(int nDenom, int64_t nValueMin, int64_t 
 
             // Function returns as follows:
             //
-            // bit 0 - 100GOAT+1 ( bit on if present )
-            // bit 1 - 10GOAT+1
-            // bit 2 - 1GOAT+1
-            // bit 3 - .1GOAT+1
+            // bit 0 - 100GRAVITON+1 ( bit on if present )
+            // bit 1 - 10GRAVITON+1
+            // bit 2 - 1GRAVITON+1
+            // bit 3 - .1GRAVITON+1
 
             CTxIn vin = CTxIn(out.tx->GetHash(),out.i);
 
@@ -2444,7 +2444,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend, 
                     } else if (coin_type == ONLY_NONDENOMINATED) {
                         strFailReason = _("Unable to locate enough Darksend non-denominated funds for this transaction.");
                     } else if (coin_type == ONLY_NONDENOMINATED_NOTMN) {
-                        strFailReason = _("Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 GOAT.");
+                        strFailReason = _("Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 GRAVITON.");
                     } else {
                         strFailReason = _("Unable to locate enough Darksend denominated funds for this transaction.");
                         strFailReason += _("Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.");
@@ -3490,6 +3490,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
         nCredit += nReward;
     }
 
+
     // Masternode Payments
     int payments = 1;
     // start masternode payments
@@ -4228,7 +4229,7 @@ void CWallet::FixSpentCoins(int& nMismatchFound, int64_t& nBalanceInQuestion, bo
         {
             if (IsMine(pcoin->vout[n]) && pcoin->IsSpent(n) && (txindex.vSpent.size() <= n || txindex.vSpent[n].IsNull()))
             {
-                LogPrintf("FixSpentCoins found lost coin %s GOAT %s[%d], %s\n",
+                LogPrintf("FixSpentCoins found lost coin %s BC %s[%d], %s\n",
                     FormatMoney(pcoin->vout[n].nValue), pcoin->GetHash().ToString(), n, fCheckOnly? "repair not attempted" : "repairing");
                 nMismatchFound++;
                 nBalanceInQuestion += pcoin->vout[n].nValue;
@@ -4240,7 +4241,7 @@ void CWallet::FixSpentCoins(int& nMismatchFound, int64_t& nBalanceInQuestion, bo
             }
             else if (IsMine(pcoin->vout[n]) && !pcoin->IsSpent(n) && (txindex.vSpent.size() > n && !txindex.vSpent[n].IsNull()))
             {
-                LogPrintf("FixSpentCoins found spent coin %s GOAT %s[%d], %s\n",
+                LogPrintf("FixSpentCoins found spent coin %s BC %s[%d], %s\n",
                     FormatMoney(pcoin->vout[n].nValue), pcoin->GetHash().ToString(), n, fCheckOnly? "repair not attempted" : "repairing");
                 nMismatchFound++;
                 nBalanceInQuestion += pcoin->vout[n].nValue;

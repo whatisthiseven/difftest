@@ -3,19 +3,19 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Goat</source>
-        <translation>O Goat</translation>
+        <source>About Graviton</source>
+        <translation>O Graviton</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Goat&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Goat&lt;/b&gt; verzija</translation>
+        <source>&lt;b&gt;Graviton&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Graviton&lt;/b&gt; verzija</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Goat developers</source>
+Copyright © 2014 The Graviton developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -58,8 +58,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Goat addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>To so vaši Goat naslovi za prejemanje plačil. Priporočeno je da vsakemu pošiljatelju namenite drugega in tako dobite večji pregled nad svojimi nakazili.</translation>
+        <source>These are your Graviton addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>To so vaši Graviton naslovi za prejemanje plačil. Priporočeno je da vsakemu pošiljatelju namenite drugega in tako dobite večji pregled nad svojimi nakazili.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -73,8 +73,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Goat address</source>
-        <translation>Podpišite sporočilo, kot dokazilo lastništva Goat naslova</translation>
+        <source>Sign a message to prove you own a Graviton address</source>
+        <translation>Podpišite sporočilo, kot dokazilo lastništva Graviton naslova</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -88,8 +88,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Goat address</source>
-        <translation>Potrdi sporočilo, da zagotovite, da je bilo podpisano z izbranim Goat naslovom</translation>
+        <source>Verify a message to ensure it was signed with a specified Graviton address</source>
+        <translation>Potrdi sporočilo, da zagotovite, da je bilo podpisano z izbranim Graviton naslovom</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -256,8 +256,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>Goat will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Goat se bo sedaj zaprl, da dokonča proces šifriranje. Pomnite, da tudi šifriranje vaše denarnice ne more v celoti zaščititi vaših kovancev pred krajo z zlonamernimi programi in računalniškimi virusi, če ti okužijo vaš računalnik.</translation>
+        <source>Graviton will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Graviton se bo sedaj zaprl, da dokonča proces šifriranje. Pomnite, da tudi šifriranje vaše denarnice ne more v celoti zaščititi vaših kovancev pred krajo z zlonamernimi programi in računalniškimi virusi, če ti okužijo vaš računalnik.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -350,8 +350,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Goat</source>
-        <translation>Pokaži informacije o Goat</translation>
+        <source>Show information about Graviton</source>
+        <translation>Pokaži informacije o Graviton</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -390,13 +390,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Goat address</source>
-        <translation>Pošlji kovance na Goat naslov</translation>
+        <source>Send coins to a Graviton address</source>
+        <translation>Pošlji kovance na Graviton naslov</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Goat</source>
-        <translation>Spremeni nastavitve za Goat</translation>
+        <source>Modify configuration options for Graviton</source>
+        <translation>Spremeni nastavitve za Graviton</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -436,8 +436,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Goat</source>
-        <translation>Goat</translation>
+        <source>Graviton</source>
+        <translation>Graviton</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -446,8 +446,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Goat</source>
-        <translation>&amp;O Goat</translation>
+        <source>&amp;About Graviton</source>
+        <translation>&amp;O Graviton</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -498,13 +498,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Goat client</source>
-        <translation>Goat program</translation>
+        <source>Graviton client</source>
+        <translation>Graviton program</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Goat network</source>
-        <translation><numerusform>%n aktivne povezave na Goat omrežje</numerusform><numerusform>%n aktivnih povezav na Goat omrežje</numerusform><numerusform>%n aktivnih povezav na Goat omrežje</numerusform><numerusform>%n aktivnih povezav na Goat omrežje</numerusform></translation>
+        <source>%n active connection(s) to Graviton network</source>
+        <translation><numerusform>%n aktivne povezave na Graviton omrežje</numerusform><numerusform>%n aktivnih povezav na Graviton omrežje</numerusform><numerusform>%n aktivnih povezav na Graviton omrežje</numerusform><numerusform>%n aktivnih povezav na Graviton omrežje</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -598,8 +598,8 @@ Naslov: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Goat address or malformed URI parameters.</source>
-        <translation>URI ne more biti razčlenjen! To se lahko zgodi zaradi neveljavnega Goat naslova ali slabih parametrov URI.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Graviton address or malformed URI parameters.</source>
+        <translation>URI ne more biti razčlenjen! To se lahko zgodi zaradi neveljavnega Graviton naslova ali slabih parametrov URI.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -721,8 +721,8 @@ Naslov: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Goat can no longer continue safely and will quit.</source>
-        <translation>Prišlo je do usodne napake. Program Goat se ne more več varno nadaljevati in se bo zato zaprl. </translation>
+        <source>A fatal error occurred. Graviton can no longer continue safely and will quit.</source>
+        <translation>Prišlo je do usodne napake. Program Graviton se ne more več varno nadaljevati in se bo zato zaprl. </translation>
     </message>
 </context>
 <context>
@@ -1055,8 +1055,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Goat address.</source>
-        <translation>Vneseni naslov &quot;%1&quot; ni veljaven Goat naslov.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Graviton address.</source>
+        <translation>Vneseni naslov &quot;%1&quot; ni veljaven Graviton naslov.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1074,8 +1074,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Goat-Qt</source>
-        <translation>Goat-Qt</translation>
+        <source>Graviton-Qt</source>
+        <translation>Graviton-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1147,13 +1147,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Goat after logging in to the system.</source>
-        <translation>Avtomatično zaženi Goat ob zagonu sistema.</translation>
+        <source>Automatically start Graviton after logging in to the system.</source>
+        <translation>Avtomatično zaženi Graviton ob zagonu sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Goat on system login</source>
-        <translation>&amp;Zaženi Goat ob prijavi v sistem</translation>
+        <source>&amp;Start Graviton on system login</source>
+        <translation>&amp;Zaženi Graviton ob prijavi v sistem</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1162,8 +1162,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Goat client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avtomatično odpri vrata na routerju za Goat program. To deluje le če vaš router podpira UPnP in je ta omogočen. </translation>
+        <source>Automatically open the Graviton client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avtomatično odpri vrata na routerju za Graviton program. To deluje le če vaš router podpira UPnP in je ta omogočen. </translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1172,8 +1172,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Goat network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Poveži se na Goat omrežje skozi SOCKS proxy (npr. ko se povezujete prek Tora)</translation>
+        <source>Connect to the Graviton network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Poveži se na Graviton omrežje skozi SOCKS proxy (npr. ko se povezujete prek Tora)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1247,8 +1247,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Goat.</source>
-        <translation>Tu lahko nastavite jezik uporabniškega vmesnika. Nastavitve bodo pričele delovati ob ponovnem zagonu Goat aplikacije. </translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Graviton.</source>
+        <translation>Tu lahko nastavite jezik uporabniškega vmesnika. Nastavitve bodo pričele delovati ob ponovnem zagonu Graviton aplikacije. </translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1314,8 +1314,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Goat.</source>
-        <translation>Ta nastavitev bo pričela delovati ob ponovnem zagonu Goat aplikacije</translation>
+        <source>This setting will take effect after restarting Graviton.</source>
+        <translation>Ta nastavitev bo pričela delovati ob ponovnem zagonu Graviton aplikacije</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1333,8 +1333,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Goat network after a connection is established, but this process has not completed yet.</source>
-        <translation>Prikazane informacije so morda zastarele. Vaša denarnica se avtomatično sinhronizira z Goat omrežjem, ko je vzpostavljena povezava, toda ta proces še ni bil zaključen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Graviton network after a connection is established, but this process has not completed yet.</source>
+        <translation>Prikazane informacije so morda zastarele. Vaša denarnica se avtomatično sinhronizira z Graviton omrežjem, ko je vzpostavljena povezava, toda ta proces še ni bil zaključen.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1407,7 +1407,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start goat: click-to-pay handler</source>
+        <source>Cannot start graviton: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1575,8 +1575,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Goat-Qt help message to get a list with possible Goat command-line options.</source>
-        <translation>Prikaži Goat-Qt sporočilo za pomoč , ki prikaže vse možnosti ukazne vrstice Goat aplikacije</translation>
+        <source>Show the Graviton-Qt help message to get a list with possible Graviton command-line options.</source>
+        <translation>Prikaži Graviton-Qt sporočilo za pomoč , ki prikaže vse možnosti ukazne vrstice Graviton aplikacije</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1595,13 +1595,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>Goat - Debug window</source>
-        <translation>Goat - okno za odpravljanje napak</translation>
+        <source>Graviton - Debug window</source>
+        <translation>Graviton - okno za odpravljanje napak</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Goat Core</source>
-        <translation>Goat jedro</translation>
+        <source>Graviton Core</source>
+        <translation>Graviton jedro</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1610,8 +1610,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Goat debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Odpri Goat datoteko zapisov odpravljanja napak iz trenutnega direktorija podatkov. Če so datoteke zapisov velike, to lahko traja nekaj sekund.</translation>
+        <source>Open the Graviton debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Odpri Graviton datoteko zapisov odpravljanja napak iz trenutnega direktorija podatkov. Če so datoteke zapisov velike, to lahko traja nekaj sekund.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1620,8 +1620,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Goat RPC console.</source>
-        <translation>Dobrodošli v Goat RPC konzoli.</translation>
+        <source>Welcome to the Graviton RPC console.</source>
+        <translation>Dobrodošli v Graviton RPC konzoli.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1729,8 +1729,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 GOAT</source>
-        <translation>123.456 GOAT {0.00 ?}</translation>
+        <source>0.00 BC</source>
+        <translation>123.456 BC {0.00 ?}</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1799,8 +1799,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 GOAT</source>
-        <translation>123.456 GOAT</translation>
+        <source>123.456 BC</source>
+        <translation>123.456 BC</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1814,8 +1814,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Goat address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Vnesite Goat naslov (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Vnesite Graviton naslov (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1914,8 +1914,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Goat address</source>
-        <translation>OPOZORILO: Neveljaven Goat naslov</translation>
+        <source>WARNING: Invalid Graviton address</source>
+        <translation>OPOZORILO: Neveljaven Graviton naslov</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1988,8 +1988,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Goat address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Vnesite Goat naslov (npr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Vnesite Graviton naslov (npr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -2049,8 +2049,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Goat address</source>
-        <translation>Podpišite sporočilo, kot dokazilo lastništva Goat naslova</translation>
+        <source>Sign the message to prove you own this Graviton address</source>
+        <translation>Podpišite sporočilo, kot dokazilo lastništva Graviton naslova</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2081,8 +2081,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Goat address</source>
-        <translation>Potrdite sporočilo, da zagotovite, da je bilo podpisano z izbranim Goat naslovom</translation>
+        <source>Verify the message to ensure it was signed with the specified Graviton address</source>
+        <translation>Potrdite sporočilo, da zagotovite, da je bilo podpisano z izbranim Graviton naslovom</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2092,8 +2092,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Goat address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Vnesite Goat naslov (npr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Graviton address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Vnesite Graviton naslov (npr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2102,8 +2102,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Goat signature</source>
-        <translation>Vnesite Goat podpis</translation>
+        <source>Enter Graviton signature</source>
+        <translation>Vnesite Graviton podpis</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2681,8 +2681,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Goat version</source>
-        <translation>Goat različica</translation>
+        <source>Graviton version</source>
+        <translation>Graviton različica</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2691,7 +2691,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or goatd</source>
+        <source>Send command to -server or gravitond</source>
         <translation>Pošlji ukaz na -server ali blackoind</translation>
     </message>
     <message>
@@ -2711,13 +2711,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: goat.conf)</source>
-        <translation>Določi konfiguracijsko datoteko (privzeto: goat.conf)</translation>
+        <source>Specify configuration file (default: graviton.conf)</source>
+        <translation>Določi konfiguracijsko datoteko (privzeto: graviton.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: goatd.pid)</source>
-        <translation>Določi pid datoteko (privzeto: goat.pid)</translation>
+        <source>Specify pid file (default: gravitond.pid)</source>
+        <translation>Določi pid datoteko (privzeto: graviton.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2734,13 +2734,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=goatrpc
+rpcuser=gravitonrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Goat Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Graviton Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2846,8 +2846,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Goat Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Goat will not work properly.</source>
-        <translation>Opozorilo: Prosimo preverite svoj datum in čas svojega računalnika! Če je vaša ura nastavljena napačno Goat ne bo deloval.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Graviton will not work properly.</source>
+        <translation>Opozorilo: Prosimo preverite svoj datum in čas svojega računalnika! Če je vaša ura nastavljena napačno Graviton ne bo deloval.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -3153,7 +3153,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Goat Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Goat is shutting down.</source>
+        <source>Initialization sanity check failed. Graviton is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3218,13 +3218,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Goat Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Goat</source>
-        <translation>Napaka pri nalaganju wallet.dat: denarnica zahteva novejšo verzijo Goat</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Graviton</source>
+        <translation>Napaka pri nalaganju wallet.dat: denarnica zahteva novejšo verzijo Graviton</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Goat to complete</source>
-        <translation>Denarnica mora biti prepisana: ponovno odprite Goat za dokončanje</translation>
+        <source>Wallet needed to be rewritten: restart Graviton to complete</source>
+        <translation>Denarnica mora biti prepisana: ponovno odprite Graviton za dokončanje</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3288,8 +3288,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Goat Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Goat is probably already running.</source>
-        <translation>Navezava v %s  na tem računalniku ni mogoča Goat aplikacija je verjetno že zagnana.</translation>
+        <source>Unable to bind to %s on this computer. Graviton is probably already running.</source>
+        <translation>Navezava v %s  na tem računalniku ni mogoča Graviton aplikacija je verjetno že zagnana.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3328,7 +3328,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Goat Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Goat is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Graviton is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
